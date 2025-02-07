@@ -1,0 +1,752 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\asus\\source\\repos\\JoberDesk\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\services\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\dtos\\user\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\dtos\\user\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\dtos\\user\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\dtos\\user\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.presentation\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|solutionrelative:joberdesk.presentation\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.presentation\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|solutionrelative:joberdesk.presentation\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|solutionrelative:joberdesk.presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.dal\\seed\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|solutionrelative:joberdesk.dal\\seed\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.presentation\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|solutionrelative:joberdesk.presentation\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|solutionrelative:joberdesk.presentation\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\services\\implementations\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.presentation\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|solutionrelative:joberdesk.presentation\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.presentation\\areas\\manage\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|solutionrelative:joberdesk.presentation\\areas\\manage\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.presentation\\wwwroot\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|solutionrelative:joberdesk.presentation\\wwwroot\\assets\\css\\main.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\helpers\\exceptions\\user\\userloginexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\helpers\\exceptions\\user\\userloginexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE1461A-8CC0-4939-B508-8FC73910117A}|JoberDesk.Core\\JoberDesk.Core.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.core\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE1461A-8CC0-4939-B508-8FC73910117A}|JoberDesk.Core\\JoberDesk.Core.csproj|solutionrelative:joberdesk.core\\entities\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\businessserviceregistrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\businessserviceregistrations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE1461A-8CC0-4939-B508-8FC73910117A}|JoberDesk.Core\\JoberDesk.Core.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.core\\enums\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE1461A-8CC0-4939-B508-8FC73910117A}|JoberDesk.Core\\JoberDesk.Core.csproj|solutionrelative:joberdesk.core\\enums\\usertype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.presentation\\areas\\manage\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|solutionrelative:joberdesk.presentation\\areas\\manage\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\helpers\\exceptions\\user\\userregisterexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\helpers\\exceptions\\user\\userregisterexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.dal\\configurations\\companyconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|solutionrelative:joberdesk.dal\\configurations\\companyconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|solutionrelative:joberdesk.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\services\\implementations\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\services\\implementations\\companyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\services\\implementations\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\services\\implementations\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\dtos\\category\\createcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\dtos\\category\\createcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\dtos\\company\\createcompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\dtos\\company\\createcompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\dtos\\company\\updatecompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\dtos\\company\\updatecompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\dtos\\company\\getcompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\dtos\\company\\getcompanydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE1461A-8CC0-4939-B508-8FC73910117A}|JoberDesk.Core\\JoberDesk.Core.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.core\\entities\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE1461A-8CC0-4939-B508-8FC73910117A}|JoberDesk.Core\\JoberDesk.Core.csproj|solutionrelative:joberdesk.core\\entities\\company.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\dtos\\category\\getcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\dtos\\category\\getcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\dtos\\category\\updatecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\dtos\\category\\updatecategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\helpers\\exceptions\\category\\categorynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\helpers\\exceptions\\category\\categorynotfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.dal\\repositories\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|solutionrelative:joberdesk.dal\\repositories\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.dal\\repositories\\implementations\\companyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|solutionrelative:joberdesk.dal\\repositories\\implementations\\companyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.dal\\repositories\\implementations\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|solutionrelative:joberdesk.dal\\repositories\\implementations\\categoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\helpers\\mappers\\companymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\helpers\\mappers\\companymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\helpers\\mappers\\categorymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\helpers\\mappers\\categorymapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.dal\\repositories\\interfaces\\icompanyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F833693-23AA-4BBC-8FF1-65B1BB916390}|JoberDesk.DAL\\JoberDesk.DAL.csproj|solutionrelative:joberdesk.dal\\repositories\\interfaces\\icompanyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\services\\interfaces\\icompanyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\services\\interfaces\\icompanyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.business\\services\\interfaces\\iindustryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A71A8252-B282-4B91-9A35-A6767F4F2458}|JoberDesk.Business\\JoberDesk.Business.csproj|solutionrelative:joberdesk.business\\services\\interfaces\\iindustryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.presentation\\areas\\manage\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A83963B9-C20A-499D-A2BF-50D69F2C681E}|JoberDesk.Presentation\\JoberDesk.Presentation.csproj|solutionrelative:joberdesk.presentation\\areas\\manage\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Migrations\\20250207115516_addLogoColumnToCompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:JoberDesk.DAL\\Migrations\\20250207115516_addLogoColumnToCompany.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE1461A-8CC0-4939-B508-8FC73910117A}|JoberDesk.Core\\JoberDesk.Core.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.core\\enums\\experiencelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE1461A-8CC0-4939-B508-8FC73910117A}|JoberDesk.Core\\JoberDesk.Core.csproj|solutionrelative:joberdesk.core\\enums\\experiencelevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE1461A-8CC0-4939-B508-8FC73910117A}|JoberDesk.Core\\JoberDesk.Core.csproj|c:\\users\\asus\\source\\repos\\joberdesk\\joberdesk.core\\enums\\employmenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE1461A-8CC0-4939-B508-8FC73910117A}|JoberDesk.Core\\JoberDesk.Core.csproj|solutionrelative:joberdesk.core\\enums\\employmenttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CompanyConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Configurations\\CompanyConfiguration.cs",
+              "RelativeDocumentMoniker": "JoberDesk.DAL\\Configurations\\CompanyConfiguration.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Configurations\\CompanyConfiguration.cs",
+              "RelativeToolTip": "JoberDesk.DAL\\Configurations\\CompanyConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T11:32:36.465Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SeedData.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Seed\\SeedData.cs",
+              "RelativeDocumentMoniker": "JoberDesk.DAL\\Seed\\SeedData.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Seed\\SeedData.cs",
+              "RelativeToolTip": "JoberDesk.DAL\\Seed\\SeedData.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T18:43:27.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "JoberDesk.Presentation\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "JoberDesk.Presentation\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABwAAAAAAAAAAAAAADIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T18:31:46.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Views\\Auth\\Login.cshtml",
+              "RelativeDocumentMoniker": "JoberDesk.Presentation\\Views\\Auth\\Login.cshtml",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Views\\Auth\\Login.cshtml",
+              "RelativeToolTip": "JoberDesk.Presentation\\Views\\Auth\\Login.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T17:26:13.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Views\\Auth\\Register.cshtml",
+              "RelativeDocumentMoniker": "JoberDesk.Presentation\\Views\\Auth\\Register.cshtml",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Views\\Auth\\Register.cshtml",
+              "RelativeToolTip": "JoberDesk.Presentation\\Views\\Auth\\Register.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAAGoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T15:19:43.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\User\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\DTOs\\User\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\User\\RegisterDto.cs",
+              "RelativeToolTip": "JoberDesk.Business\\DTOs\\User\\RegisterDto.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAACkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:59:01.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\User\\LoginDto.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\DTOs\\User\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\User\\LoginDto.cs",
+              "RelativeToolTip": "JoberDesk.Business\\DTOs\\User\\LoginDto.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAxwBcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T16:47:38.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\Services\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "JoberDesk.Business\\Services\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:57:55.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "JoberDesk.Presentation\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "JoberDesk.Presentation\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T18:31:18.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "JoberDesk.Presentation\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "JoberDesk.Presentation\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T18:25:00.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Areas\\Manage\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "JoberDesk.Presentation\\Areas\\Manage\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Areas\\Manage\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "JoberDesk.Presentation\\Areas\\Manage\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T18:24:46.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Implementations\\UserService.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\Services\\Implementations\\UserService.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Implementations\\UserService.cs",
+              "RelativeToolTip": "JoberDesk.Business\\Services\\Implementations\\UserService.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAuwFYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T14:09:06.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Presentation\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "JoberDesk.Presentation\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAowEgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T15:18:24.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "main.css",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\wwwroot\\Assets\\css\\main.css",
+              "RelativeDocumentMoniker": "JoberDesk.Presentation\\wwwroot\\Assets\\css\\main.css",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\wwwroot\\Assets\\css\\main.css",
+              "RelativeToolTip": "JoberDesk.Presentation\\wwwroot\\Assets\\css\\main.css",
+              "ViewState": "AgIAAFkEAAAAAAAAAAAAAG0EAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-07T18:11:52.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserLoginException.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Helpers\\Exceptions\\User\\UserLoginException.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\Helpers\\Exceptions\\User\\UserLoginException.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Helpers\\Exceptions\\User\\UserLoginException.cs",
+              "RelativeToolTip": "JoberDesk.Business\\Helpers\\Exceptions\\User\\UserLoginException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T17:14:33.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppUser.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\Entities\\AppUser.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Core\\Entities\\AppUser.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\Entities\\AppUser.cs",
+              "RelativeToolTip": "JoberDesk.Core\\Entities\\AppUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:59:10.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BusinessServiceRegistrations.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\BusinessServiceRegistrations.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\BusinessServiceRegistrations.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\BusinessServiceRegistrations.cs",
+              "RelativeToolTip": "JoberDesk.Business\\BusinessServiceRegistrations.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T15:57:07.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserRegisterException.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Helpers\\Exceptions\\User\\UserRegisterException.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\Helpers\\Exceptions\\User\\UserRegisterException.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Helpers\\Exceptions\\User\\UserRegisterException.cs",
+              "RelativeToolTip": "JoberDesk.Business\\Helpers\\Exceptions\\User\\UserRegisterException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T14:16:11.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Areas\\Manage\\Views\\Category\\Create.cshtml",
+              "RelativeDocumentMoniker": "JoberDesk.Presentation\\Areas\\Manage\\Views\\Category\\Create.cshtml",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Areas\\Manage\\Views\\Category\\Create.cshtml",
+              "RelativeToolTip": "JoberDesk.Presentation\\Areas\\Manage\\Views\\Category\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T12:29:00.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserType.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\Enums\\UserType.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Core\\Enums\\UserType.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\Enums\\UserType.cs",
+              "RelativeToolTip": "JoberDesk.Core\\Enums\\UserType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T11:32:27.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Program.cs",
+              "RelativeToolTip": "JoberDesk.Presentation\\Program.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwBsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T14:09:47.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CompanyService.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Implementations\\CompanyService.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\Services\\Implementations\\CompanyService.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Implementations\\CompanyService.cs",
+              "RelativeToolTip": "JoberDesk.Business\\Services\\Implementations\\CompanyService.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwEYAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:00:21.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CreateCompanyDto.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Company\\CreateCompanyDto.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\DTOs\\Company\\CreateCompanyDto.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Company\\CreateCompanyDto.cs",
+              "RelativeToolTip": "JoberDesk.Business\\DTOs\\Company\\CreateCompanyDto.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA4wAwAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T11:56:35.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UpdateCompanyDto.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Company\\UpdateCompanyDto.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\DTOs\\Company\\UpdateCompanyDto.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Company\\UpdateCompanyDto.cs",
+              "RelativeToolTip": "JoberDesk.Business\\DTOs\\Company\\UpdateCompanyDto.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvx8AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T11:57:30.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CreateCategoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Category\\CreateCategoryDto.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\DTOs\\Category\\CreateCategoryDto.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Category\\CreateCategoryDto.cs",
+              "RelativeToolTip": "JoberDesk.Business\\DTOs\\Category\\CreateCategoryDto.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T11:10:35.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Implementations\\CategoryService.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\Services\\Implementations\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Implementations\\CategoryService.cs",
+              "RelativeToolTip": "JoberDesk.Business\\Services\\Implementations\\CategoryService.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAowFsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:00:42.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GetCompanyDto.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Company\\GetCompanyDto.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\DTOs\\Company\\GetCompanyDto.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Company\\GetCompanyDto.cs",
+              "RelativeToolTip": "JoberDesk.Business\\DTOs\\Company\\GetCompanyDto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T11:28:39.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Company.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\Entities\\Company.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Core\\Entities\\Company.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\Entities\\Company.cs",
+              "RelativeToolTip": "JoberDesk.Core\\Entities\\Company.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:33:22.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "GetCategoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Category\\GetCategoryDto.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\DTOs\\Category\\GetCategoryDto.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Category\\GetCategoryDto.cs",
+              "RelativeToolTip": "JoberDesk.Business\\DTOs\\Category\\GetCategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T11:10:24.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "UpdateCategoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Category\\UpdateCategoryDto.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\DTOs\\Category\\UpdateCategoryDto.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\DTOs\\Category\\UpdateCategoryDto.cs",
+              "RelativeToolTip": "JoberDesk.Business\\DTOs\\Category\\UpdateCategoryDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T11:10:38.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CategoryNotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Helpers\\Exceptions\\Category\\CategoryNotFoundException.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\Helpers\\Exceptions\\Category\\CategoryNotFoundException.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Helpers\\Exceptions\\Category\\CategoryNotFoundException.cs",
+              "RelativeToolTip": "JoberDesk.Business\\Helpers\\Exceptions\\Category\\CategoryNotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:12:05.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CompanyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Repositories\\Implementations\\CompanyRepository.cs",
+              "RelativeDocumentMoniker": "JoberDesk.DAL\\Repositories\\Implementations\\CompanyRepository.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Repositories\\Implementations\\CompanyRepository.cs",
+              "RelativeToolTip": "JoberDesk.DAL\\Repositories\\Implementations\\CompanyRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:02:34.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "CategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Repositories\\Implementations\\CategoryRepository.cs",
+              "RelativeDocumentMoniker": "JoberDesk.DAL\\Repositories\\Implementations\\CategoryRepository.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Repositories\\Implementations\\CategoryRepository.cs",
+              "RelativeToolTip": "JoberDesk.DAL\\Repositories\\Implementations\\CategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:03:13.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "CompanyMapper.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Helpers\\Mappers\\CompanyMapper.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\Helpers\\Mappers\\CompanyMapper.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Helpers\\Mappers\\CompanyMapper.cs",
+              "RelativeToolTip": "JoberDesk.Business\\Helpers\\Mappers\\CompanyMapper.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:09:06.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CategoryMapper.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Helpers\\Mappers\\CategoryMapper.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\Helpers\\Mappers\\CategoryMapper.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Helpers\\Mappers\\CategoryMapper.cs",
+              "RelativeToolTip": "JoberDesk.Business\\Helpers\\Mappers\\CategoryMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:09:38.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Repositories\\Interfaces\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "JoberDesk.DAL\\Repositories\\Interfaces\\ICategoryRepository.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Repositories\\Interfaces\\ICategoryRepository.cs",
+              "RelativeToolTip": "JoberDesk.DAL\\Repositories\\Interfaces\\ICategoryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:02:11.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ICompanyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Repositories\\Interfaces\\ICompanyRepository.cs",
+              "RelativeDocumentMoniker": "JoberDesk.DAL\\Repositories\\Interfaces\\ICompanyRepository.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Repositories\\Interfaces\\ICompanyRepository.cs",
+              "RelativeToolTip": "JoberDesk.DAL\\Repositories\\Interfaces\\ICompanyRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T13:01:47.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ICompanyService.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Interfaces\\ICompanyService.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\Services\\Interfaces\\ICompanyService.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Interfaces\\ICompanyService.cs",
+              "RelativeToolTip": "JoberDesk.Business\\Services\\Interfaces\\ICompanyService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T12:59:15.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IIndustryService.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Interfaces\\IIndustryService.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Business\\Services\\Interfaces\\IIndustryService.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\Services\\Interfaces\\IIndustryService.cs",
+              "RelativeToolTip": "JoberDesk.Business\\Services\\Interfaces\\IIndustryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T12:58:29.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Areas\\Manage\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "JoberDesk.Presentation\\Areas\\Manage\\Views\\Category\\Index.cshtml",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\Areas\\Manage\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "JoberDesk.Presentation\\Areas\\Manage\\Views\\Category\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-07T11:12:26.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "20250207115516_addLogoColumnToCompany.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Migrations\\20250207115516_addLogoColumnToCompany.cs",
+              "RelativeDocumentMoniker": "JoberDesk.DAL\\Migrations\\20250207115516_addLogoColumnToCompany.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\Migrations\\20250207115516_addLogoColumnToCompany.cs",
+              "RelativeToolTip": "JoberDesk.DAL\\Migrations\\20250207115516_addLogoColumnToCompany.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T11:55:16.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ExperienceLevel.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\Enums\\ExperienceLevel.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Core\\Enums\\ExperienceLevel.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\Enums\\ExperienceLevel.cs",
+              "RelativeToolTip": "JoberDesk.Core\\Enums\\ExperienceLevel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T11:31:59.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "EmploymentType.cs",
+              "DocumentMoniker": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\Enums\\EmploymentType.cs",
+              "RelativeDocumentMoniker": "JoberDesk.Core\\Enums\\EmploymentType.cs",
+              "ToolTip": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\Enums\\EmploymentType.cs",
+              "RelativeToolTip": "JoberDesk.Core\\Enums\\EmploymentType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T11:31:55.484Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

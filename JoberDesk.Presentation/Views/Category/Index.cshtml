@@ -1,0 +1,59 @@
+﻿@using JoberDesk.Business.DTOs.Category
+@model List<GetCategoryDto>
+
+<!-- Banner -->
+<section class="inner-banner" style="background:#242c36 url(https://via.placeholder.com/1920x600) no-repeat;">
+    <div class="container">
+        <div class="caption">
+            <h2>Vakansiya Kateqoriyaları</h2>
+            <p>Kateqoriya sayı<span>@Model.Count</span></p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Jobs Section -->
+<section class="jobs">
+    <div class="container">
+        <div class="row heading">
+            <h2>Find Popular Jobs</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
+        </div>
+
+        <!-- Filter Input -->
+        <div class="row">
+            <input type="text" id="searchInput" class="form-control" placeholder="Şirkət adını daxil edin...">
+        </div>
+
+        <!-- Category List -->
+        <div id="categoryList">
+            <div class="companies">
+                @foreach (var item in Model)
+                {
+                    <div class="company-list category-item">
+                        <div class="row company-item">
+                            <div class="col-md-2 col-sm-2">
+                                <div class="company-logo">
+                                    <i class="@item.Icon"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-10 col-sm-10">
+                                <div class="company-content">
+                                    <h3>@item.Name <span class="full-time">Full Time</span></h3>
+                                    <p>
+                                        <span class="company-name"><i class="fa fa-briefcase"></i> Google</span>
+                                        <span class="company-location"><i class="fa fa-map-marker"></i> 07th Avenue, New York, NY</span>
+                                        <span class="package"><i class="fa fa-money"></i> $22,000-$50,000</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+

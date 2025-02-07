@@ -1,0 +1,12 @@
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\JoberDesk.Core.csproj.AssemblyReference.cache
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\JoberDesk.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\JoberDesk.Core.AssemblyInfoInputs.cache
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\JoberDesk.Core.AssemblyInfo.cs
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\JoberDesk.Core.csproj.CoreCompileInputs.cache
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\bin\Debug\net8.0\JoberDesk.Core.deps.json
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\bin\Debug\net8.0\JoberDesk.Core.dll
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\bin\Debug\net8.0\JoberDesk.Core.pdb
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\JoberDesk.Core.dll
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\refint\JoberDesk.Core.dll
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\JoberDesk.Core.pdb
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\ref\JoberDesk.Core.dll

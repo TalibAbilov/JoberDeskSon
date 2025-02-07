@@ -1,0 +1,17 @@
+﻿@using JoberDesk.Business.DTOs.Industry
+@model CreateIndustryDto
+<div class="container">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" class="form-control" placeholder="Enter name">
+            <span asp-validation-for="Name" style="color:red"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Icon">Icon</label>
+            <input asp-for="Icon" class="form-control" placeholder="Enter icon">
+            <span asp-validation-for="Icon" style="color:red"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>

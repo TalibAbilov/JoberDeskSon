@@ -1,0 +1,114 @@
+﻿ @* @using JoberDesk.Business.DTOs.User
+ @using JoberDesk.Core.Enums
+ @model RegisterDto
+ 		<!-- login section start -->
+ <section class="login-wrapper">
+ 	<div class="container">
+ 		<div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+ 			<form method="post">
+ 				<img class="img-responsive" alt="logo" src="~/Assets/img/logo.png">
+ 				<div class="form-group">
+ 					<label asp-for="Email">E-poçt adresi</label>
+ 					<input asp-for="Email" type="email" class="form-control input-lg" placeholder="E-poçt adresi daxil edin...">
+ 					<span asp-validation-for="Email" style="color:red"></span>
+ 				</div>
+ 				<div class="form-group">
+ 					<div class="row">
+ 						<div class="col-md-6">
+ 							<label asp-for="Password">Şifrə</label>
+ 							<input asp-for="Password" type="password" class="form-control input-lg" placeholder="Şifrə daxil edin...">
+ 							<span asp-validation-for="Password" style="color:red"></span>
+ 						</div>
+
+ 						<div class="col-md-6">
+ 							<label asp-for="ConfirmPassword">Təsdiq şifrəsi</label>
+ 							<input asp-for="ConfirmPassword" type="password" class="form-control input-lg" placeholder="Təsdiq şifrəsi daxil edin...">
+ 							<span asp-validation-for="ConfirmPassword" style="color:red"></span>
+ 						</div>
+ 					</div>
+ 				</div>
+ 				<div class="form-group">
+ 					<label asp-for="UserType">İstifadəçi tipi</label>
+ 					<select asp-for="UserType" class="form-control">
+ 						<option>İstifadəçi tipini seçin...</option>
+ 						@foreach(UserType type in Enum.GetValues(typeof(UserType)))
+ 						{
+ 							var name = "Namizəd";
+ 							@if (type.ToString() == "Company")
+ 							{
+ 								name = "Şirkət";
+ 							}
+ 							<option value="@type">@name</option>
+ 						}
+ 					</select>
+ 					<span asp-validation-for="UserType" style="color:red"></span>
+ 				</div>
+ 				<div asp-validation-summary="All" style="color:red"></div>
+ 				<button type="submit" class="btn btn-primary">Qeydiyyatı tamamla</button>
+ 			</form>
+ 		</div>
+ 	</div>
+ </section>
+ <!-- login section End -->	 *@
+ @using JoberDesk.Business.DTOs.User
+@using JoberDesk.Core.Enums
+@model RegisterDto
+
+<!-- Login Section Start -->
+<section class="login-wrapper">
+    <div class="container">
+        <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+            <form method="post" class="card shadow p-4">
+                <div class="text-center mb-4">
+                    <img class="img-responsive" alt="logo" src="~/Assets/img/logo.png" style="max-width: 150px;">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="Email" class="fw-bold">E-poçt adresi</label>
+                    <input asp-for="Email" type="email" class="form-control" placeholder="E-poçt adresi daxil edin...">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="Password" class="fw-bold">Şifrə</label>
+                            <input asp-for="Password" type="password" class="form-control" placeholder="Şifrə daxil edin...">
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group mb-3">
+                            <label asp-for="ConfirmPassword" class="fw-bold">Təsdiq şifrəsi</label>
+                            <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Təsdiq şifrəsi daxil edin...">
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label asp-for="UserType" class="fw-bold">İstifadəçi tipi</label>
+                    <select asp-for="UserType" class="form-control">
+                        <option value="">İstifadəçi tipini seçin...</option>
+                        @foreach (UserType type in Enum.GetValues(typeof(UserType)))
+                        {
+                            <option value="@type">@((type == UserType.Company) ? "Şirkət" : "Namizəd")</option>
+                        }
+                    </select>
+                    <span asp-validation-for="UserType" class="text-danger"></span>
+                </div>
+
+                <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block mt-3" style="background-color: #da0833; border-color: #da0833;">
+                    Qeydiyyatı tamamla
+                </button>
+                
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<!-- Login Section End -->
