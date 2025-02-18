@@ -1,0 +1,69 @@
+﻿@using JoberDesk.Business.DTOs.Company
+@model UpdateCompanyDto
+
+<section class="company-create-form">
+    <div class="container">
+        <a style="color:blue" class="btn btn-secondary" asp-action="Profile">Geri dön</a>
+
+        <h2>Şirkət məlumatlarını dəyiş</h2>
+
+        <form method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="CompanyName">Şirkət Adı</label>
+                <input asp-for="CompanyName" type="text" class="form-control" placeholder="Şirkət adını daxil edin...">
+                <span asp-validation-for="CompanyName" style="color:red"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="IndustryIds">Sənaye növləri seçin.</label>
+                <select asp-for="IndustryIds" multiple class="form-control" asp-items=@(new SelectList(ViewBag.Industries,"Id","Name"))>
+                </select>
+                <span asp-validation-for="IndustryIds" style="color:red"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Address">Ünvan</label>
+                <input asp-for="Address" type="text" class="form-control" placeholder="Ünvanı daxil edin...">
+                <span asp-validation-for="Address" style="color:red"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Website">Vebsayt</label>
+                <input asp-for="Website" type="text" class="form-control" placeholder="Vebsayt ünvanını daxil edin...">
+                <span asp-validation-for="Website" style="color:red"></span>
+            </div>
+            @* <div style="width:100px">
+                <h6>Active Image:</h6>
+                <img style="width:100%" src="~/Upload/Company/@Model.Logo" />
+                <hr />
+            </div> *@
+            <div class="form-group">
+                <label asp-for="file">Select Image</label>
+                <input asp-for="file" type="file" class="form-control-file">
+                <span asp-validation-for="file" style="color:red"></span>
+            </div>
+            <hr />
+
+
+           @*  <div style="width:100px">
+                <h6>Active About:</h6>
+                @(Html.Raw(Model.About))
+            </div> *@
+            <hr />
+            <div class="form-group">
+                <label asp-for="About">Haqqında</label>
+                <div id="quill-editor"></div>
+                <input type="hidden" asp-for="About" id="about-input" required />
+                <span asp-validation-for="About" style="color:red"></span>
+            </div>
+
+            <div asp-validation-summary="All" style="color:red"></div>
+            <button type="submit" class="btn btn-primary">Dəyişiklikləri tətbiq et</button>
+        </form>
+
+    </div>
+
+   
+
+
+</section>

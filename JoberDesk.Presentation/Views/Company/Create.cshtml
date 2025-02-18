@@ -1,0 +1,66 @@
+﻿@using JoberDesk.Business.DTOs.Company
+@using JoberDesk.DAL.Context
+@using Microsoft.Extensions.Options
+@model CreateCompanyDto
+
+@inject IOptions<StripeSettings> Stripe
+
+<section class="company-create-form">
+    <div class="container">
+        <h2>Şirkət Yarat</h2>
+        
+        <form method="post" enctype="multipart/form-data" onchange="this.form.submit()">
+            <div class="form-group">
+                <label asp-for="CompanyName">Şirkət Adı</label>
+                <input asp-for="CompanyName" type="text" class="form-control" placeholder="Şirkət adını daxil edin...">
+                <span asp-validation-for="CompanyName" style="color:red"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="IndustryIds">Sənaye növləri seçin.</label>
+                <select asp-for="IndustryIds" multiple class="form-control" asp-items=@(new SelectList(ViewBag.Industries,"Id","Name"))>
+                </select>
+                <span asp-validation-for="IndustryIds" style="color:red"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Address">Ünvan</label>
+                <input asp-for="Address" type="text" class="form-control" placeholder="Ünvanı daxil edin...">
+                <span asp-validation-for="Address" style="color:red"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Website">Vebsayt</label>
+                <input asp-for="Website" type="text" class="form-control" placeholder="Vebsayt ünvanını daxil edin...">
+                <span asp-validation-for="Website" style="color:red"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="file">Select Image</label>
+                <input asp-for="file" type="file" class="form-control-file">
+                <span asp-validation-for="file" style="color:red"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="About">Haqqında</label>
+                <div id="quill-editor-description"></div>
+                <input type="hidden" asp-for="About" id="about-input" required />
+                <span asp-validation-for="About" style="color:red"></span>
+            </div>
+
+            <div asp-validation-summary="All" style="color:red"></div>
+            <script src="//checkout.stripe.com/v2/checkout.js"
+                    class="stripe-button"
+                    data-key="@Stripe.Value.Publishablekey"
+                    data-amount="800"
+                    data-name="[Deveducate]"
+                    data-locale="en"
+                    data-discription="Sample charge"
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                    data-zip-code="true">
+            </script>
+        </form>
+    </div>
+    
+
+</section>
+

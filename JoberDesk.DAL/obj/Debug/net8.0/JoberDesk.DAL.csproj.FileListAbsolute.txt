@@ -15,3 +15,4 @@ C:\Users\asus\source\repos\JoberDesk\JoberDesk.DAL\obj\Debug\net8.0\refint\Jober
 C:\Users\asus\source\repos\JoberDesk\JoberDesk.DAL\obj\Debug\net8.0\JoberDesk.DAL.pdb
 C:\Users\asus\source\repos\JoberDesk\JoberDesk.DAL\obj\Debug\net8.0\JoberDesk.DAL.genruntimeconfig.cache
 C:\Users\asus\source\repos\JoberDesk\JoberDesk.DAL\obj\Debug\net8.0\ref\JoberDesk.DAL.dll
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.DAL\obj\Debug\net8.0\JoberDesk.DAL.sourcelink.json

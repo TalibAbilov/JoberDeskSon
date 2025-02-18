@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using JoberDesk.Business.Helpers.Enums;
 using JoberDesk.Core.Enums;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace JoberDesk.Business.DTOs.User
 {
     public class RegisterDto
     {
-        public UserType? UserType { get; set; }
+        public UserRoles? UserRole { get; set; }
         public string? Email { get; set; }
         public string? Password { get; set; }
         public string? ConfirmPassword { get; set; }
@@ -43,13 +44,11 @@ namespace JoberDesk.Business.DTOs.User
                 .Matches(x => x.Password)
                 .WithMessage("Şifrələr uyğunlaşmır.");
 
-            RuleFor(x => x.UserType)
+            RuleFor(x => x.UserRole)
                 .NotNull()
                 .WithMessage("İstifadəçi tipi seç.")
                 .NotEmpty()
                 .WithMessage("İstifadəçi tipi seç.");
-
-
         }
     }
 }

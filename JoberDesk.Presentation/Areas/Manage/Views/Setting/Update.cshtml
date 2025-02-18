@@ -1,0 +1,13 @@
+﻿@using JoberDesk.Business.DTOs.Setting
+@model UpdateSettingDto
+<div class="container">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Value">Dəyər</label>
+            <input class="form-control" asp-for="Value" placeholder="Dəyər daxil et">
+            <span asp-validation-for="Value" style="color:red"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Redaktə et</button>
+    </form>
+</div>

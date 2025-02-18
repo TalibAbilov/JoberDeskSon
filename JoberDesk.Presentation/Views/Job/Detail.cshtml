@@ -1,0 +1,136 @@
+﻿
+@using JoberDesk.Business.DTOs.Job
+@model GetJobDto
+
+
+
+<section class="inner-banner" style="background: linear-gradient(rgba(36, 44, 54, 0.8), rgba(36, 44, 54, 0.8)), url('https://via.placeholder.com/1920x600') no-repeat center center; background-size: cover;">
+	<div class="container">
+		<div class="caption">
+			<h2>Get your jobs</h2>
+			<p>Get your Popular jobs <span>202 New job</span></p>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="profile-detail">
+	<div class="container">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="basic-information">
+					<div class="col-md-9 col-sm-9">
+
+						<div class="profile-content">
+							<h3>Vakansiya məlumatları</h3>
+							<hr />
+							<ul class="information">
+								<li><span>Vakansiya adı:</span>@Model.Name</li>
+								<li><span>Vakansiya kateqoriyası:</span>@Model.Category.Name</li>
+								<li><span>Paylaşıldığı tarix:</span>@Model.CreatedAt.ToString("dd/MM/yyyy")</li>
+								<li><span>Bitmə tarixi:</span>@Model.EndTime.ToString("dd/MM/yyyy")</li>
+								<li><span>Tələb olunun minumum iş təcrübəsi:</span>@Model.ExperienceLevel.ToString()</li>
+								<li><span>Tələb olunun minumum təhsil:</span>@Model.EducationLevel.ToString()</li>
+								<li><span>İş növü:</span>@Model.EmploymentType.ToString()</li>
+							</ul>
+						</div>
+					</div>
+					<ul class="social">
+					</ul>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+
+
+							<i class="fa fa-info-circle fa-fw"></i> İş haqqında
+						</div>
+						<!-- /.panel-heading -->
+						<div class="panel-body">
+
+							<p>@(Html.Raw(Model.Description))</p>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+
+
+							<i class="fa fa-list fa-fw"></i> İşin tələbləri
+						</div>
+						<!-- /.panel-heading -->
+						<div class="panel-body">
+
+							<p>@(Html.Raw(Model.Requirements))</p>
+						</div>
+					</div>
+
+					@* <div class="panel panel-default">
+					<div class="panel-heading">
+					<i class="fa fa-leaf fa-fw"></i> Responsibilities:
+					</div>
+					<!-- /.panel-heading -->
+					<div class="panel-body">
+					<p>Rapid growth since incorporation has triggered a chain of products, acquisitions and partnerships beyond Google's core search engine (Google Search).</p>
+					<ul>
+					<li>Software testing in a Web Applications/Mobile environment.</li>
+					<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+					<li>Software testing in a Web Applications environment.</li>
+					<li>Translate designs into responsive web interfaces</li>
+					<li>Software testing in a Web Applications/Mobile environment.</li>
+					<li>Software testing in a Web Applications environment.</li>
+					<li>Translate designs into responsive web interfaces</li>
+					<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+					<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+					<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+					</ul>
+					</div>
+					</div>
+
+					<div class="panel panel-default">
+					<div class="panel-heading">
+					<i class="fa fa-coffee fa-fw"></i> Minimum qualifications:
+					</div>
+					<!-- /.panel-heading -->
+					<div class="panel-body">
+					<p>Rapid growth since incorporation has triggered a chain of products.</p>
+					<ul>
+					<li>Software testing in a Web Applications/Mobile environment.</li>
+					<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+					<li>Software testing in a Web Applications environment.</li>
+					<li>Translate designs into responsive web interfaces</li>
+					<li>Software testing in a Web Applications/Mobile environment.</li>
+					<li>Software testing in a Web Applications environment.</li>
+					<li>Translate designs into responsive web interfaces</li>
+					<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+					<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+					<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+					</ul>
+					</div>
+					</div>
+
+					<div class="panel panel-default">
+					<div class="panel-heading">
+					<i class="fa fa-graduation-cap fa-fw"></i> Preferred qualifications:
+					</div>
+					<!-- /.panel-heading -->
+					<div class="panel-body">
+					<ul>
+					<li>Software testing in a Web Applications/Mobile environment.</li>
+					<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+					<li>Software testing in a Web Applications environment.</li>
+					<li>Translate designs into responsive web interfaces</li>
+					<li>Software testing in a Web Applications/Mobile environment.</li>
+					<li>Software testing in a Web Applications environment.</li>
+					<li>Translate designs into responsive web interfaces</li>
+					<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+					<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+					<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+					</ul>
+					</div>
+					</div> *@
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

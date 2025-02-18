@@ -35,7 +35,6 @@ namespace JoberDesk.DAL.Seed
 					RegistrationTime = DateTime.Now,
 					Email = "ebilovtalib43@gmail.com",
 					UserName = "admin",
-					UserType=null,
 					EmailConfirmed = true,
 				};
 

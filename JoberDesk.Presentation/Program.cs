@@ -1,10 +1,13 @@
 using JoberDesk.Business;
+using JoberDesk.Business.Services.Implementations;
 using JoberDesk.Core.Entities;
 using JoberDesk.DAL;
 using JoberDesk.DAL.Context;
 using JoberDesk.DAL.Seed;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Stripe;
 using System;
 
 namespace JoberDesk.Presentation
@@ -15,14 +18,16 @@ namespace JoberDesk.Presentation
 		{
 			var builder = WebApplication.CreateBuilder(args);
 
-			// Add services to the container.
-			builder.Services.AddControllersWithViews();
+            // Add services to the container.
+            builder.Services.AddControllersWithViews();
 
-			builder.Services.AddBusinessServices();
+
+            builder.Services.AddBusinessServices(builder.Configuration);
 			builder.Services.AddDALServices();
 
 			builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 			{
+				opt.SignIn.RequireConfirmedEmail = true;
 				opt.User.RequireUniqueEmail = true;
 				opt.Password.RequiredLength = 8;
 				opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
@@ -34,6 +39,8 @@ namespace JoberDesk.Presentation
 			{
 				opt.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL"));
 			});
+			builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
 			var app = builder.Build();
 
 			using (var scope = app.Services.CreateScope())
@@ -67,6 +74,8 @@ namespace JoberDesk.Presentation
 			
 			app.UseAuthentication();
 			app.UseAuthorization();
+
+			StripeConfiguration.ApiKey = builder.Configuration["Stripe:Secretkey"];
 
 			app.MapControllerRoute(
             name: "areas",

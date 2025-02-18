@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using JoberDesk.Business.DTOs.Job;
 using JoberDesk.Core.Entities;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,6 @@ namespace JoberDesk.Business.DTOs.Category
         public int Id { get; set; }
         public string Name { get; set; }
         public string Icon { get; set; }
-        public ICollection<Job>Jobs { get; set; }
+        public ICollection<GetJobDto>Jobs { get; set; }
     }
 }

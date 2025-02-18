@@ -12,10 +12,15 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+    <PackageReference Include="Stripe.net" Version="47.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\JoberDesk.Business\JoberDesk.Business.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Upload\Company\" />
   </ItemGroup>
 
 </Project>

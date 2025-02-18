@@ -1,0 +1,158 @@
+﻿@using JoberDesk.Business.DTOs.Company
+@model GetCompanyDto
+
+@{
+	int step = 0;
+}
+
+<section class="inner-banner" style="background: linear-gradient(rgba(36, 44, 54, 0.8), rgba(36, 44, 54, 0.8)), url('https://via.placeholder.com/1920x600') no-repeat center center; background-size: cover;">
+	<div class="container">
+		<div class="caption">
+			<p>Şirkətin vakansiya sayı:<span> @Model.Jobs.Count</span></p>
+
+			<a class="btn btn-success" asp-action="MyVacancies" asp-controller="Job">Vakansiyalarım</a>
+			
+		</div>
+	</div>
+</section>
+
+
+
+<section class="profile-detail">
+	<div class="container">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="basic-information">
+					<div class="col-md-9 col-sm-9">
+						
+						<div class="profile-content">
+							<h3>Şirkət məlumatları</h3>
+							<a style="color:blue" class="btn btn-secondary" asp-action="Update" asp-route-id="@Model.Id">Düzəliş et</a>
+							<hr />
+							<ul class="information">
+								<li><span>Şirkət adı:</span>@Model.CompanyName</li>
+
+								<li>
+									<span>Şirkət Loqosu:</span><img src="~/Upload/Company/@Model.Logo" alt="" style="width:200px" class="img-responsive">
+								</li>
+								<li>
+									<span>Sənaye tipləri:</span>
+									@foreach (var item in Model.IndustryCompanies)
+									{
+										step += 1;
+										if (Model.IndustryCompanies.Count > step)
+										{
+											<a asp-action="Index" asp-controller="Category" style="color:red">@item.Industry.Name,</a>
+
+										}
+										else
+										{
+											<a style="color:red">@item.Industry.Name</a>
+
+										}
+
+									}
+								</li>
+								<li><span>Ünvan:</span>@Model.Address</li>
+								<li>
+									@if (!string.IsNullOrEmpty(Model.Website))
+									{
+										<span>Website:</span>
+										<a href="@Model.Website" target="_blank" class="website-link">
+											@Model.Website
+										</a>
+									}
+									
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+					<ul class="social">
+				
+						
+					</ul>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+
+
+							<i class="fa fa-user fa-fw"></i>@Model.CompanyName Haqqında
+						</div>
+						<!-- /.panel-heading -->
+						<div class="panel-body">
+
+							<p>@(Html.Raw(Model.About))</p>
+						</div>
+					</div>
+
+					@* <div class="panel panel-default">
+						<div class="panel-heading">
+							<i class="fa fa-leaf fa-fw"></i> Responsibilities:
+						</div>
+						<!-- /.panel-heading -->
+						<div class="panel-body">
+							<p>Rapid growth since incorporation has triggered a chain of products, acquisitions and partnerships beyond Google's core search engine (Google Search).</p>
+							<ul>
+								<li>Software testing in a Web Applications/Mobile environment.</li>
+								<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+								<li>Software testing in a Web Applications environment.</li>
+								<li>Translate designs into responsive web interfaces</li>
+								<li>Software testing in a Web Applications/Mobile environment.</li>
+								<li>Software testing in a Web Applications environment.</li>
+								<li>Translate designs into responsive web interfaces</li>
+								<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+								<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+								<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<i class="fa fa-coffee fa-fw"></i> Minimum qualifications:
+						</div>
+						<!-- /.panel-heading -->
+						<div class="panel-body">
+							<p>Rapid growth since incorporation has triggered a chain of products.</p>
+							<ul>
+								<li>Software testing in a Web Applications/Mobile environment.</li>
+								<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+								<li>Software testing in a Web Applications environment.</li>
+								<li>Translate designs into responsive web interfaces</li>
+								<li>Software testing in a Web Applications/Mobile environment.</li>
+								<li>Software testing in a Web Applications environment.</li>
+								<li>Translate designs into responsive web interfaces</li>
+								<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+								<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+								<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<i class="fa fa-graduation-cap fa-fw"></i> Preferred qualifications:
+						</div>
+						<!-- /.panel-heading -->
+						<div class="panel-body">
+							<ul>
+								<li>Software testing in a Web Applications/Mobile environment.</li>
+								<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+								<li>Software testing in a Web Applications environment.</li>
+								<li>Translate designs into responsive web interfaces</li>
+								<li>Software testing in a Web Applications/Mobile environment.</li>
+								<li>Software testing in a Web Applications environment.</li>
+								<li>Translate designs into responsive web interfaces</li>
+								<li>Software Test Plans from Business Requirement Specifications for test engineering group.</li>
+								<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+								<li>Run production tests as part of software implementation; Create, deliver and support test plans for testing group to execute.</li>
+							</ul>
+						</div>
+					</div> *@
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

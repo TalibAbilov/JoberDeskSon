@@ -1,0 +1,93 @@
+﻿@using JoberDesk.Business.DTOs.Industry
+@model List<GetIndustryDto>
+
+
+<div class="container mt-4">
+    <div style="margin:100px"></div>
+    <h2 class="mb-4 text-center">Şirkət sənayeləri</h2>
+    <div style="margin:50px"></div>
+    <div class="d-flex justify-content-center mb-3">
+        <input type="text" id="searchInput" class="form-control w-50" placeholder="Kateqoriya axtar..." onkeyup="filterCategories()">
+    </div>
+
+    <div class="category-container">
+        <div class="category-list">
+            @foreach (var item in Model)
+            {
+                <div class="category-item d-flex align-items-center p-3">
+
+                    @Html.Raw(item.Icon)
+
+                    <h5 class="mb-0 flex-grow-1">@item.Name</h5>
+
+                    <div class="text-end">
+                        <p class="mb-0 text-muted"><strong>@item.IndustryCompanies.Where(x=>x.IndustryId==item.Id).ToList().Count Şirkət</strong></p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function filterCategories() {
+        let input = document.getElementById("searchInput").value.toLowerCase();
+        let categories = document.querySelectorAll(".category-item");
+
+        categories.forEach(category => {
+            let name = category.querySelector("h5").innerText.toLowerCase();
+            if (name.includes(input)) {
+                category.style.display = "flex";
+            } else {
+                category.style.display = "none";
+            }
+        });
+    }
+</script>
+
+
+<style>
+    .category-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+
+    .category-list {
+        scrollbar-width: thin;
+        scrollbar-color: #007bff #f1f1f1;
+    }
+
+
+        .category-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .category-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        .category-list::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 8px;
+        }
+
+    .category-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #eee;
+    }
+
+        .category-item:last-child {
+            border-bottom: none;
+        }
+</style>

@@ -2,11 +2,13 @@
 using JoberDesk.Business.DTOs.Category;
 using JoberDesk.Business.Helpers.Exceptions.Category;
 using JoberDesk.Business.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JoberDesk.Presentation.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [Authorize(Roles ="Admin")]
     public class CategoryController : Controller
     {
         readonly ICategoryService _service;

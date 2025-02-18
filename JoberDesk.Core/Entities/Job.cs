@@ -22,5 +22,7 @@ namespace JoberDesk.Core.Entities
 		public Company Company { get; set; }
 		public DateTime EndTime { get; set; }
 		public bool IsConfirmedByAdmin { get; set; }
+		public bool IsPremium { get; set; }
+		public DateTime PremiumEndTime { get; set; }
 	}
 }

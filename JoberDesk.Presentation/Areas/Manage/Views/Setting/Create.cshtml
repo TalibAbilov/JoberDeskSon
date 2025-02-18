@@ -1,0 +1,19 @@
+﻿@using JoberDesk.Business.DTOs.Setting
+@model CreateSettingDto
+<div class="container">
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Key">Açar</label>
+            <input class="form-control" asp-for="Key" placeholder="Açar daxil et">
+            <span asp-validation-for="Key" style="color:red"></span>
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Value">Dəyər</label>
+            <input class="form-control" asp-for="Value" placeholder="Dəyər daxil et">
+            <span asp-validation-for="Value" style="color:red"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Yarat</button>
+    </form>
+</div>

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using JoberDesk.Business.DTOs.Category;
 using JoberDesk.Business.DTOs.Industry;
+using JoberDesk.Business.DTOs.Job;
 using JoberDesk.Business.Helpers.Exceptions.Base;
 using JoberDesk.Business.Helpers.Exceptions.Category;
 using JoberDesk.Business.Helpers.Exceptions.Industry;
@@ -11,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -53,19 +55,27 @@ namespace JoberDesk.Business.Services.Implementations
             _rep.Delete(industry);
             await _rep.SaveChangesAsync();
         }
-        public async Task<List<GetIndustryDto>> GetAll()
+        public async Task<List<GetIndustryDto>> FindAll(Expression<Func<Industry, bool>> expression, params string[] includes)
         {
-            var industries = await _rep.GetAll().ToListAsync();
+            var jobs = await _rep.FindAll(expression, includes).ToListAsync();
+
+            return _mapper.Map<List<GetIndustryDto>>(jobs);
+        }
+        public async Task<List<GetIndustryDto>> GetAll(params string[] includes)
+        {
+            var industries = await _rep.GetAll(includes).ToListAsync();
             return _mapper.Map<List<GetIndustryDto>>(industries);
         }
 
-        public async Task<GetIndustryDto> GetById(int id)
+        public async Task<GetIndustryDto> GetById(int id, params string[] includes)
         {
             if (id <= 0)
             {
                 throw new NegativeOrZeroIdException();
             }
-            GetIndustryDto dto = _mapper.Map<GetIndustryDto>(await _rep.GetById(id));
+            var industry=  await _rep.GetById(id,includes);
+
+            GetIndustryDto dto = _mapper.Map<GetIndustryDto>(industry);
 
             return dto != null ? dto : throw new IndustryNotFoundException();
         }
@@ -90,7 +100,6 @@ namespace JoberDesk.Business.Services.Implementations
             newIndustry.UpdatedAt = DateTime.Now;
             _rep.Update(newIndustry);
             await _rep.SaveChangesAsync();
-
         }
 
     }

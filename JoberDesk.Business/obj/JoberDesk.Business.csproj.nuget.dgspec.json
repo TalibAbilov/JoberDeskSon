@@ -61,6 +61,18 @@
             "FluentValidation.AspNetCore": {
               "target": "Package",
               "version": "[11.3.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.10.0, )"
+            },
+            "MimeKit": {
+              "target": "Package",
+              "version": "[4.10.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[47.3.0, )"
             }
           },
           "imports": [

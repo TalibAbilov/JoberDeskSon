@@ -10,3 +10,4 @@ C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\JoberDesk.C
 C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\refint\JoberDesk.Core.dll
 C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\JoberDesk.Core.pdb
 C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\ref\JoberDesk.Core.dll
+C:\Users\asus\source\repos\JoberDesk\JoberDesk.Core\obj\Debug\net8.0\JoberDesk.Core.sourcelink.json

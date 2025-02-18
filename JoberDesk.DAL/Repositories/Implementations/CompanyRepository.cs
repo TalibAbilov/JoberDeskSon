@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace JoberDesk.DAL.Repositories.Implementations
 {
-    public class CompanyRepository : Repository<Company>, IRepository<Company>
+    public class CompanyRepository : Repository<Company>, ICompanyRepository
     {
         public CompanyRepository(JoberDeskDbContext context) : base(context)
         {

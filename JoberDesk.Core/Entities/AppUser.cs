@@ -10,8 +10,9 @@ namespace JoberDesk.Core.Entities
 {
 	public class AppUser:IdentityUser
 	{
-		public UserType? UserType { get; set; }
+		public int? CompanyId { get; set; }
 		public Company? Company { get; set; }
+		public int? EmployeeId { get; set; }
 		public Employee? Employee { get; set; }
 		public DateTime RegistrationTime { get; set; }=DateTime.Now;	
 	}

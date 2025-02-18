@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JoberDesk.Business")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2be092d3973505e8cc50e4789cd5f245c4d2dc8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("JoberDesk.Business")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JoberDesk.Business")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

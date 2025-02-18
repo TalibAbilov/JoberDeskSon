@@ -1,4 +1,5 @@
-﻿using JoberDesk.Core.Entities.Base;
+﻿using JoberDesk.Core.Entities;
+using JoberDesk.Core.Entities.Base;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,13 +13,15 @@ namespace JoberDesk.DAL.Repositories.Interfaces
     public interface IRepository<TEntity> where TEntity : BaseEntity, new()
     {
         public DbSet<TEntity> Table { get; }
-        public Task<TEntity?> GetById(int id);
-        public IQueryable<TEntity> GetAll();
-       // public IQueryable<TEntity> FindAll(Expression<Func<TEntity, bool>> expression = null, params string[] includes);
+        public Task<TEntity?> GetById(int id, params string[] includes);
+        public IQueryable<TEntity> GetAll(params string[] includes);
+        public IQueryable<TEntity> FindAll(Expression<Func<TEntity, bool>> expression = null, params string[] includes);
         public Task<TEntity> Create(TEntity entity);
         public void Update(TEntity entity);
         public void Delete(TEntity entity);
         public Task<int> SaveChangesAsync();
         public Task<bool> IsExist(Expression<Func<TEntity, bool>> expression);
+        Task AddRange(IEnumerable<TEntity> entities);
+        public void RemoveRange(IEnumerable<TEntity> entities);
     }
 }

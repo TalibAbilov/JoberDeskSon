@@ -37,6 +37,17 @@ namespace JoberDesk.DAL.Configurations
 			builder
 				.Property(x=>x.EndTime)
 				.IsRequired();
-		}
+            builder
+			   .HasOne(x => x.Category)
+			   .WithMany(x=>x.Jobs) 
+			   .HasForeignKey(x => x.CategoryId)
+			   .OnDelete(DeleteBehavior.Restrict);
+
+            builder
+                .HasOne(x => x.Company)
+                .WithMany(x=>x.Jobs)
+                .HasForeignKey(x => x.CompanyId)
+                .OnDelete(DeleteBehavior.Restrict);
+        }
 	}
 }

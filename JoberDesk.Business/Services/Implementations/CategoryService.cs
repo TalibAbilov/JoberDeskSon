@@ -53,21 +53,25 @@ namespace JoberDesk.Business.Services.Implementations
             _rep.Delete(category);
             await _rep.SaveChangesAsync();
         }
-        public async Task<List<GetCategoryDto>> GetAll()
+        public async Task<List<GetCategoryDto>> GetAll(params string[] includes)
         {
-            var categories= await _rep.GetAll().ToListAsync();
+            var categories= await _rep.GetAll(includes).ToListAsync();
             return  _mapper.Map<List<GetCategoryDto>>(categories);
         }
 
-        public async Task<GetCategoryDto> GetById(int id)
+        public async Task<GetCategoryDto> GetById(int id, params string[] includes)
         {
             if (id <= 0)
             {
                 throw new NegativeOrZeroIdException();
             }
-            GetCategoryDto dto = _mapper.Map<GetCategoryDto>(await _rep.GetById(id));
-
-            return dto != null ? dto :throw new CategoryNotFoundException();
+            var category= await _rep.GetById(id,includes);
+            GetCategoryDto dto = _mapper.Map<GetCategoryDto>(category);
+            if(dto == null)
+            {
+                throw new CategoryNotFoundException();
+            }
+            return dto;
         }
 
         public async Task Update(UpdateCategoryDto dto)

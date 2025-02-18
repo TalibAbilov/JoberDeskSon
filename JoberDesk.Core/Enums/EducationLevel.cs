@@ -8,6 +8,7 @@ namespace JoberDesk.Core.Enums
 {
 	public enum EducationLevel
 	{ 
+		OrtaTehsil,
 		Bakalavr,
 		Magistr,    
 		Doktorantura  

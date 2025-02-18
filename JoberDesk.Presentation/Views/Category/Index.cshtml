@@ -1,59 +1,87 @@
 ﻿@using JoberDesk.Business.DTOs.Category
 @model List<GetCategoryDto>
 
-<!-- Banner -->
-<section class="inner-banner" style="background:#242c36 url(https://via.placeholder.com/1920x600) no-repeat;">
-    <div class="container">
-        <div class="caption">
-            <h2>Vakansiya Kateqoriyaları</h2>
-            <p>Kateqoriya sayı<span>@Model.Count</span></p>
-        </div>
+
+<div class="container mt-4">
+    <div style="margin:100px"></div>
+    <h2 class="mb-4 text-center">Vakansiya kateqoriyaları</h2>
+    <div style="margin:50px"></div>
+    <div class="d-flex justify-content-center mb-3">
+        <input type="text" id="searchInput" class="form-control w-50" placeholder="Kateqoriya axtar..." onkeyup="filterCategories()">
     </div>
-</section>
+
+    <div class="category-container">
+        <div class="category-list">
+            @foreach (var item in Model)
+            {
+                <div class="category-item d-flex align-items-center p-3">
+
+                    @Html.Raw(item.Icon)
 
 
-<!-- Jobs Section -->
-<section class="jobs">
-    <div class="container">
-        <div class="row heading">
-            <h2>Find Popular Jobs</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</p>
-        </div>
+                    <h5 class="mb-0 flex-grow-1"><a asp-action="Index" asp-controller="Home">@item.Name</a></h5>
 
-        <!-- Filter Input -->
-        <div class="row">
-            <input type="text" id="searchInput" class="form-control" placeholder="Şirkət adını daxil edin...">
-        </div>
 
-        <!-- Category List -->
-        <div id="categoryList">
-            <div class="companies">
-                @foreach (var item in Model)
-                {
-                    <div class="company-list category-item">
-                        <div class="row company-item">
-                            <div class="col-md-2 col-sm-2">
-                                <div class="company-logo">
-                                    <i class="@item.Icon"></i>
-                                </div>
-                            </div>
-                            <div class="col-md-10 col-sm-10">
-                                <div class="company-content">
-                                    <h3>@item.Name <span class="full-time">Full Time</span></h3>
-                                    <p>
-                                        <span class="company-name"><i class="fa fa-briefcase"></i> Google</span>
-                                        <span class="company-location"><i class="fa fa-map-marker"></i> 07th Avenue, New York, NY</span>
-                                        <span class="package"><i class="fa fa-money"></i> $22,000-$50,000</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
+                    <div class="text-end">
+                        <p class="mb-0 text-muted"><strong>@item.Jobs.Count Vakansiya</strong></p>
+                   
                     </div>
-                }
-            </div>
+                </div>
+            }
         </div>
+
+        <p id="noResultsMessage" style="display: none; color: red; font-weight: bold; text-align: center; margin-top: 20px;">
+            Kateqoriya tapılmadı
+        </p>
+
     </div>
-</section>
+</div>
 
 
+
+
+
+<style>
+    .category-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        max-height: 300px;
+        overflow-y: auto;
+    }
+
+
+    .category-list {
+        scrollbar-width: thin;
+        scrollbar-color: #007bff #f1f1f1;
+    }
+
+
+        .category-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .category-list::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        .category-list::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 8px;
+        }
+
+    .category-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #eee;
+    }
+
+        .category-item:last-child {
+            border-bottom: none;
+        }
+</style>

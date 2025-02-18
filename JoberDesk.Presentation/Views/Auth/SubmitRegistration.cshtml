@@ -1,0 +1,22 @@
+﻿@using JoberDesk.Business.DTOs.User
+@model SubmitRegistrationDto
+<!-- login section start -->
+<section class="login-wrapper">
+    <div class="container">
+        <div class="col-md-6 col-sm-8 col-md-offset-3 col-sm-offset-2">
+            <form method="post" class="card p-4 shadow-lg" style="max-width: 400px; margin: auto; border-radius: 10px;">
+                <div class="text-center">
+                    <img class="img-fluid mb-3" alt="logo" src="~/Assets/img/logo.png" style="max-width: 150px;">
+                </div>
+
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <button type="submit" class="btn btn-primary btn-lg btn-block mt-3" style="background-color: #da0833; border-color: #da0833;">
+                    Hesabı təsdiqlə
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- login section End -->	

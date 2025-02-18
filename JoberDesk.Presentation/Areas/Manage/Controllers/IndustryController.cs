@@ -4,11 +4,14 @@ using JoberDesk.Business.DTOs.Industry;
 using JoberDesk.Business.Helpers.Exceptions.Category;
 using JoberDesk.Business.Helpers.Exceptions.Industry;
 using JoberDesk.Business.Services.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace JoberDesk.Presentation.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [Authorize(Roles = "Admin")]
+
     public class IndustryController : Controller
     {
         readonly IIndustryService _service;
@@ -22,7 +25,7 @@ namespace JoberDesk.Presentation.Areas.Manage.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var data = await _service.GetAll();
+            var data = await _service.GetAll("IndustryCompanies");
             return View(data);
         }
         public IActionResult Create()

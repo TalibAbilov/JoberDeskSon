@@ -1,0 +1,92 @@
+﻿@using JoberDesk.Business.DTOs.Job
+@using JoberDesk.Core.Enums
+
+@model UpdateJobDto
+
+
+
+<section class="company-create-form">
+    <div class="container">
+        <h2>Vakansiyanı redaktə et</h2>
+
+
+        <form method="post" enctype="multipart/form-data">
+           @*  <div class="form-group">
+                <label asp-for="Name">Vakansiya Adı</label>
+                <input asp-for="Name" type="text" class="form-control" placeholder="Vakansiya adını daxil edin...">
+                <span asp-validation-for="Name" style="color:red"></span>
+            </div> *@
+
+            <div class="form-group">
+                <label asp-for="CategoryId">Vakansiya kateqoriyası.</label>
+
+                <select class="form-control" asp-for="CategoryId" id="exampleFormControlSelect1" asp-items=@(new SelectList(ViewBag.Categories,"Id","Name"))>
+                <option value="">Vakansiya kateqoriyasını seçin...</option>
+                </select>
+                <span asp-validation-for="CategoryId" style="color:red"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="EmploymentType" class="fw-bold">İş növü</label>
+                <select asp-for="EmploymentType" class="form-control">
+                    <option value="">İş növünü seçin...</option>
+                    @foreach (EmploymentType type in Enum.GetValues(typeof(EmploymentType)))
+                    {
+                            <option value="@type">@((type == EmploymentType.FullTime) ? "Tam ştat" : "Yarım ştat")</option>
+                    }
+                </select>
+                <span asp-validation-for="EmploymentType" style="color:red"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="ExperienceLevel" class="fw-bold">Minumum iş təcrübəsi(il)</label>
+                <select asp-for="ExperienceLevel" class="form-control">
+                    <option value="">Minumum iş təcrübəsini seçin...</option>
+                    @foreach (ExperienceLevel type in Enum.GetValues(typeof(ExperienceLevel)))
+                    {
+                            <option value="@type">@type.ToString()</option>
+                    }
+                </select>
+                <span asp-validation-for="ExperienceLevel" style="color:red"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="EducationLevel" class="fw-bold">Tələb olunun minumum təhsil səviyyəsi</label>
+                <select asp-for="EducationLevel" class="form-control">
+                    <option value="">Təhsil səviyyəsini seçin...</option>
+                    @foreach (EducationLevel type in Enum.GetValues(typeof(EducationLevel)))
+                    {
+                            <option value="@type">@((type == EducationLevel.OrtaTehsil) ? "Orta təhsil" : type.ToString())</option>
+                    }
+                </select>
+                <span asp-validation-for="EducationLevel" style="color:red"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description">Vakansiya haqqında</label>
+                <div id="quill-editor-about"></div>
+                <input type="hidden" asp-for="Description" id="description-input" required />
+                <span asp-validation-for="Description" style="color:red"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Requirements">Vakansiya tələbləri</label>
+                <div id="quill-editor-requirements"></div>
+                <input type="hidden" asp-for="Requirements" id="requirements-input" required />
+                <span asp-validation-for="Requirements" style="color:red"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="EndTime">Son tarix:</label>
+                <input asp-for="EndTime" type="date" id="EndTime" class="form-control" required>
+            </div>
+
+            <div asp-validation-summary="All" style="color:red"></div>
+
+            <button type="submit" class="btn btn-primary">Dəyişiklikləri tətbiq et</button>
+
+
+        </form>
+    </div>
+
+
+</section>
+

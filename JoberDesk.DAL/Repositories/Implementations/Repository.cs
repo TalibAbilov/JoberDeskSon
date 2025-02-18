@@ -22,6 +22,11 @@ namespace JoberDesk.DAL.Repositories.Implementations
 
         public DbSet<TEntity> Table => _context.Set<TEntity>();
 
+        public async Task AddRange(IEnumerable<TEntity> entities)
+        {
+            await _context.AddRangeAsync(entities);
+        }
+
         public async Task<TEntity> Create(TEntity entity)
         {
             await Table.AddAsync(entity);
@@ -33,15 +38,36 @@ namespace JoberDesk.DAL.Repositories.Implementations
             Table.Remove(entity);
         }
 
-        public IQueryable<TEntity> GetAll()
+        public IQueryable<TEntity> FindAll(Expression<Func<TEntity, bool>> expression = null, params string[] includes)
+        {
+            IQueryable<TEntity> query = _context.Set<TEntity>();
+
+            foreach (var include in includes)
+            {
+                query = query.Include(include);
+            }
+
+            return expression != null ? query.Where(expression) : query;
+        }
+
+
+        public IQueryable<TEntity> GetAll(params string[] includes)
         {
             IQueryable<TEntity> query = Table.AsNoTracking();
+            foreach(var item in includes)
+            {
+                query=query.Include(item);
+            }
             return query;
         }
 
-        public async Task<TEntity?> GetById(int id)
+        public async Task<TEntity?> GetById(int id, params string[] includes)
         {
             IQueryable<TEntity> query = Table.AsNoTracking();
+            foreach(var item in includes)
+            {
+                query=query.Include(item);
+            }
             return await query.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
         }
         public async Task<bool> IsExist(Expression<Func<TEntity, bool>> expression)
@@ -49,7 +75,12 @@ namespace JoberDesk.DAL.Repositories.Implementations
             return await Table.AnyAsync(expression);
         }
 
-        public async Task<int> SaveChangesAsync()
+		public void RemoveRange(IEnumerable<TEntity> entities)
+		{
+			_context.RemoveRange(entities);
+		}
+
+		public async Task<int> SaveChangesAsync()
         {
             return await _context.SaveChangesAsync();
         }

@@ -12,6 +12,6 @@ namespace JoberDesk.Business.DTOs.Industry
         public int Id { get; set; }
         public string Name { get; set; }
         public string Icon { get; set; }
-        //public ICollection<IndustryCompany>IndustryCompanies { get; set; }
+        public ICollection<IndustryCompany>IndustryCompanies { get; set; }
     }
 }

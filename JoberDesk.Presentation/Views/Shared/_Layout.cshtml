@@ -1,4 +1,10 @@
-﻿<!doctype html>
+﻿@using JoberDesk.Business.Services.Interfaces
+@inject ILayoutService layoutservice
+@{
+	Dictionary<string, string> setting = layoutservice.GetSetting();
+}
+
+<!doctype html>
 <html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8">
@@ -19,6 +25,8 @@
 	<link rel="stylesheet" href="~/assets/css/styles.css" />
 		
 
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
 </head>
 
@@ -33,18 +41,30 @@
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 					<i class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand" href="index.html"><img src="~/assets/img/logo.png" class="logo" alt=""></a>
+				<a class="navbar-brand" asp-action="Index" asp-controller="Home"><img src="~/assets/img/@setting["Logo"]" class="logo" alt=""></a>
 			</div>
 			<!-- End Header Navigation -->
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navbar-menu">
 				<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-					<li><a href="index.html">Home</a></li>
+					<li><a asp-action="Index" asp-controller="Home">Əsas səhifə</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Hesab</a>
 						<ul class="dropdown-menu animated fadeOutUp" style="display: none; opacity: 1;">
 							@if (User.Identity.IsAuthenticated)
 							{
+								@if (User.Identity.IsAuthenticated)
+								{
+									if (User.IsInRole("Company"))
+									{
+										<li><a asp-action="Profile" asp-controller="Company">Hesabım</a></li>
+									}
+									else if (User.IsInRole("Candidate"))
+									{
+										<li><a asp-action="Profile" asp-controller="Candidate">Hesabım</a></li>
+
+									}
+								}
 								<li><a asp-action="Logout" asp-controller="Auth">Hesabdan çıxış</a></li>
 							}
 							else
@@ -63,6 +83,7 @@
 							<li><a href="resume.html">Resume Detail</a></li>
 						</ul>
 					</li>
+					
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div>
@@ -99,17 +120,15 @@
 			</div>
 
 			<div class="col-md-3 col-sm-6">
-				<h4>Reach Us</h4>
+				<h4>Bizimlə əlaqə</h4>
 				<address>
 					<ul>
 						<li>
-							1201, Murakeu Market, QUCH07<br>
-							United Kingdon
+							Ünvan: @setting["Adress"]
 						</li>
-						<li>Email: Support@job.com</li>
-						<li>Call: 044 123 458 65879</li>
-						<li>Skype: job@skype</li>
-						<li>FAX: 123 456 85</li>
+						<li>E-poçt adresi: @setting["E-poçt"]</li>
+						<li>Telefon : @setting["Telefon"]</li>
+					
 					</ul>
 				</address>
 			</div>
@@ -123,8 +142,6 @@
 					<button type="submit" class="btn btn-primary">Login</button>
 				</form>
 			</div>
-
-
 		</div>
 		<div class="copy-right">
 			<p>&copy;Copyright 2018 Jober Desk | Design By <a href="https://themezhub.com/">ThemezHub</a></p>
@@ -136,27 +153,253 @@
 	<script type="text/javascript" src="~/assets/js/owl.carousel.min.js"></script>
 	<script src="~/assets/js/bootsnav.js"></script>
 	<script src="~/assets/js/main.js"></script>
+
+	<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+	<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
+
+@*  <script>
+	// "Vakansiya haqqında" üçün Quill editorunun inicializasiyası
+	var quillDescription = new Quill('#quill-editor-description', {
+		theme: 'snow',
+		placeholder: ' Məlumat...',
+		modules: {
+			toolbar: [
+				[{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+				[{ 'list': 'ordered' }, { 'list': 'bullet' }],
+				['bold', 'italic', 'underline'],
+				['link'],
+				[{ 'align': [] }],
+				['clean']
+			]
+		}
+	});
+
+	// "Vakansiya tələbləri" üçün Quill editorunun inicializasiyası
+	var quillRequirements = new Quill('#quill-editor-requirements', {
+		theme: 'snow',
+		placeholder: 'Vakansiya tələbləri...',
+		modules: {
+			toolbar: [
+				[{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+				[{ 'list': 'ordered' }, { 'list': 'bullet' }],
+				['bold', 'italic', 'underline'],
+				['link'],
+				[{ 'align': [] }],
+				['clean']
+			]
+		}
+	});
+
+	// Formu göndərməzdən əvvəl editor məzmunlarını hidden input-a yazırıq
+	$('form').on('submit', function () {
+		$('#about-input').val(quillDescription.root.innerHTML);
+		$('#description-input').val(quillDescription.root.innerHTML);
+		$('#requirements-input').val(quillRequirements.root.innerHTML);
+	});
+</script> *@
+	
+
+@* create company ucun*@
+	@* <script>
+		var quillDescription = new Quill('#quill-editor-description', {
+			theme: 'snow',
+			placeholder: 'Məlumat...',
+			modules: {
+				toolbar: [
+					[{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+					[{ 'list': 'ordered' }, { 'list': 'bullet' }],
+					['bold', 'italic', 'underline'],
+					['link'],
+					[{ 'align': [] }],
+					['clean']
+				]
+			}
+		});
+
+		// Quill məzmunu dəyişdikdə avtomatik input-a yazır
+		quillDescription.on('text-change', function () {
+			document.getElementById('about-input').value = quillDescription.root.innerHTML;
+		});
+
+		// Form submit olmamışdan əvvəl input-a Quill məzmununu yazırıq
+		document.querySelector("form").addEventListener("submit", function (event) {
+			document.getElementById("about-input").value = quillDescription.root.innerHTML;
+		});
+	</script> *@
 	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			var searchInput = document.getElementById("searchInput");
-			var categoryList = document.getElementById("categoryList");
-			var categories = categoryList.getElementsByClassName("category-item");
+		var quillDescription = new Quill('#quill-editor-description', {
+			theme: 'snow',
+			placeholder: 'Məlumat...',
+			modules: {
+				toolbar: [
+					[{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+					[{ 'list': 'ordered' }, { 'list': 'bullet' }],
+					['bold', 'italic', 'underline'],
+					['link'],
+					[{ 'align': [] }],
+					['clean']
+				]
+			}
+		});
 
-			searchInput.addEventListener("keyup", function () {
-				var searchText = searchInput.value.toLowerCase();
+		// Serverdən gələn dəyəri (modeldən) götür və Quill-ə əlavə et
+		var aboutValue = document.getElementById("about-input").value;
+		if (aboutValue.trim() !== "") {
+			quillDescription.root.innerHTML = aboutValue; // Əgər məlumat varsa, Quill-ə əlavə et
+		}
 
-				for (var i = 0; i < categories.length; i++) {
-					var categoryName = categories[i].textContent.toLowerCase();
+		// Quill məzmunu dəyişdikdə avtomatik input-a yazır
+		quillDescription.on('text-change', function () {
+			document.getElementById('about-input').value = quillDescription.root.innerHTML;
+		});
 
-					if (categoryName.includes(searchText)) {
-						categories[i].style.display = "";
-					} else {
-						categories[i].style.display = "none";
-					}
-				}
-			});
+		// Form submit olmamışdan əvvəl input-a Quill məzmununu yazırıq
+		document.querySelector("form").addEventListener("submit", function () {
+			document.getElementById("about-input").value = quillDescription.root.innerHTML;
 		});
 	</script>
+
+
+	<script>
+    var quillRequirements = new Quill('#quill-editor-requirements', {
+        theme: 'snow',
+        placeholder: 'Vakansiya tələbləri...',
+        modules: {
+            toolbar: [
+                [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+                [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+                ['bold', 'italic', 'underline'],
+                ['link'],
+                [{ 'align': [] }],
+                ['clean']
+            ]
+        }
+    });
+
+    // Serverdən gələn dəyəri (modeldən) götür və Quill-ə əlavə et
+    var requirementsValue = document.getElementById("requirements-input").value;
+    if (requirementsValue.trim() !== "") {
+        quillRequirements.root.innerHTML = requirementsValue; // Əgər məlumat varsa, Quill-ə əlavə et
+    }
+
+    // Quill məzmunu dəyişdikdə avtomatik input-a yazır
+    quillRequirements.on('text-change', function () {
+        document.getElementById('requirements-input').value = quillRequirements.root.innerHTML;
+    });
+
+    // Form submit olmamışdan əvvəl input-a Quill məzmununu yazırıq
+    document.querySelector("form").addEventListener("submit", function () {
+        document.getElementById("requirements-input").value = quillRequirements.root.innerHTML;
+    });
+</script>
+<script>
+   var quillAbout = new Quill('#quill-editor-about', {
+       theme: 'snow',
+       placeholder: 'Vakansiya haqqında məlumat...',
+       modules: {
+           toolbar: [
+               [{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+               [{ 'list': 'ordered' }, { 'list': 'bullet' }],
+               ['bold', 'italic', 'underline'],
+               ['link'],
+               [{ 'align': [] }],
+               ['clean']
+           ]
+       }
+   });
+
+   // Serverdən gələn dəyəri (modeldən) götür və Quill-ə əlavə et
+   var aboutValue = document.getElementById("description-input").value;
+   if (aboutValue.trim() !== "") {
+       quillAbout.root.innerHTML = aboutValue; // Əgər məlumat varsa, Quill-ə əlavə et
+   }
+
+   // Quill məzmunu dəyişdikdə avtomatik input-a yazır
+   quillAbout.on('text-change', function () {
+       document.getElementById('description-input').value = quillAbout.root.innerHTML;
+   });
+
+   // Form submit olmamışdan əvvəl input-a Quill məzmununu yazırıq
+   document.querySelector("form").addEventListener("submit", function () {
+       document.getElementById("description-input").value = quillAbout.root.innerHTML;
+   });
+</script>
+
+
+
+
+	<script>
+		function filterCategories() {
+			let input = document.getElementById("searchInput").value.toLowerCase();
+			let categories = document.querySelectorAll(".category-item");
+			let found = false;
+
+			categories.forEach(category => {
+				let name = category.querySelector("h5").innerText.toLowerCase();
+				if (name.includes(input)) {
+					category.style.display = "flex";
+					found = true;
+				} else {
+					category.style.display = "none";
+				}
+			});
+
+			document.getElementById("noResultsMessage").style.display = found ? "none" : "block";
+		}
+	</script>
+	@* <script>
+		var quillUpdate = new Quill('#quill-editor', {
+			theme: 'snow',
+			placeholder: 'Şirkət haqqında məlumat...',
+			modules: {
+				toolbar: [
+					[{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+					[{ 'list': 'ordered' }, { 'list': 'bullet' }],
+					['bold', 'italic', 'underline'],
+					['link'],
+					[{ 'align': [] }],
+					['clean']
+				]
+			}
+		});
+
+		// Server-dən gələn məlumatı burada input-un `value`-sindən götürüb Quill-ə yükləyirik.
+		var aboutValue = document.getElementById("about-input").value;
+		quill.root.innerHTML = aboutValue; // Quill-ə mövcud məlumatı əlavə et
+
+		// Məzmun dəyişəndə `input`-a yeniləyək ki, form submit olunanda dəyər göndərilsin
+
+		quill.on('text-change', function () {
+			document.getElementById("about-input").value = quill.root.innerHTML;
+		});
+	</script> *@
+	@*Company update ucun*@
+	<script>
+		var quillUpdate = new Quill('#quill-editor', {
+			theme: 'snow',
+			placeholder: 'Şirkət haqqında məlumat...',
+			modules: {
+				toolbar: [
+					[{ 'header': '1' }, { 'header': '2' }, { 'font': [] }],
+					[{ 'list': 'ordered' }, { 'list': 'bullet' }],
+					['bold', 'italic', 'underline'],
+					['link'],
+					[{ 'align': [] }],
+					['clean']
+				]
+			}
+		});
+
+		
+		var aboutValue = document.getElementById("about-input").value;
+		quillUpdate.root.innerHTML = aboutValue; 
+
+		quillUpdate.on('text-change', function () {
+			document.getElementById("about-input").value = quillUpdate.root.innerHTML;
+		});
+	</script>
+
 </body>
 </html>
 

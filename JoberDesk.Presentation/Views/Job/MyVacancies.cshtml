@@ -1,0 +1,80 @@
+﻿@using JoberDesk.Business.DTOs.Job
+@model List<GetJobDto>
+
+@{
+    ViewData["Title"] = "Mənim Vakansiyalarım";
+}
+@{
+    int count = 0;
+}
+
+<section class="my-jobs-section">
+    <div class="container">
+        <h2>Mənim Vakansiyalarım</h2>
+
+        <div class="text-end mb-3">
+            <a href="/job/create" class="btn btn-success">+ Yeni Vakansiya Yarat</a>
+        </div>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Ad</th>
+                    <th>Kateqoriya</th>
+                    <th>Premiumdur</th>
+                    <th>Premium bitmə tarixi</th>
+                    <th>Paylaşıldığı tarix</th>
+                    <th>Bitmə tarixi</th>
+                    <th>Əməliyyat</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    count++;
+                    <tr>
+                        <td>@count</td>
+
+                        <td>@item.Name</td>
+                        <td>@item.Category.Name</td>
+                        @if (item.IsPremium)
+                            {
+                            <td>Bəli</td>
+                            <td>@item.PremiumEndTime.ToString("dd/MM/yyyy")</td>
+                        }
+                        else
+                        {
+                            <td>Xeyr</td>
+                            <td>-</td>
+                        }
+
+                        <td>@item.CreatedAt.ToString("dd/MM/yyyy")</td>
+                        <td>@item.EndTime.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            <a asp-action="Delete" asp-controller="Job" asp-route-id="@item.Id" class="btn btn-danger btn-lg w-100 mb-2 shadow-sm hover-scale">
+                                <i class="fas fa-trash-alt"></i> Sil
+                            </a>
+                            <a asp-action="Detail" asp-controller="Job" asp-route-id="@item.Id" class="btn btn-secondary btn-lg w-100 mb-2 shadow-sm hover-scale">
+                                <i class="fas fa-eye"></i> Vakansiyaya bax
+                            </a>
+                            <a asp-action="Update" asp-controller="Job" asp-route-id="@item.Id" class="btn btn-primary btn-lg w-100 mb-2 shadow-sm hover-scale">
+                                <i class="fas fa-edit"></i> Vakansiyani redaktə et
+                            </a>
+                            <a asp-action="MakePremium" asp-controller="Job" asp-route-id="@item.Id" class="btn btn-success btn-lg w-100 mb-2 shadow-sm hover-scale">
+                                <i class="fas fa-star"></i> Vakansiyani premium et
+                            </a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
+<style>
+    .hover-scale:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>
