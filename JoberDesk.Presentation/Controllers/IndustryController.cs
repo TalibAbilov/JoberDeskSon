@@ -18,8 +18,16 @@ namespace JoberDesk.Presentation.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var industries = await _industryService.GetAll("IndustryCompanies");
-            return View(industries);
+            try
+            {
+
+                var industries = await _industryService.GetAll("IndustryCompanies");
+                return View(industries);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

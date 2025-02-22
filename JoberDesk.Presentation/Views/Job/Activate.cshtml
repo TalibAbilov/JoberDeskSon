@@ -1,0 +1,33 @@
+﻿@using JoberDesk.Business.DTOs.Job
+@using JoberDesk.Business.Helpers.Enums
+@using JoberDesk.Core.Entities
+@using JoberDesk.DAL.Context
+@using Microsoft.Extensions.Options
+@model GetJobDto
+@inject IOptions<StripeSettings> Stripe
+
+<div class="container" style="margin-top: 200px; margin-bottom: 200px;">
+    <h2>Vakansiyanı Aktivləşdir</h2>
+
+
+    <form method="post" onchange="this.form.submit()">
+        <input type="hidden" asp-for="Id" />
+
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <script src="//checkout.stripe.com/v2/checkout.js"
+                class="stripe-button"
+                data-key="@Stripe.Value.Publishablekey"
+                data-amount="400"
+                data-name="[Deveducate]"
+                data-locale="en"
+                data-discription="Sample charge"
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                data-zip-code="true">
+        </script>
+
+    </form>
+
+</div>
+
+
+

@@ -17,6 +17,7 @@ namespace JoberDesk.Business.DTOs.Job
 		public int CategoryId { get; set; }
 		public JoberDesk.Core.Entities.Category Category { get; set; }
 		public int CompanyId { get; set; }
+		public JoberDesk.Core.Entities.Company Company { get; set; }
 		public EmploymentType EmploymentType { get; set; }
 		public ExperienceLevel ExperienceLevel { get; set; }
 		public EducationLevel EducationLevel { get; set; }
@@ -24,5 +25,11 @@ namespace JoberDesk.Business.DTOs.Job
 		public DateTime EndTime { get; set; }
         public bool IsPremium { get; set; }
         public DateTime PremiumEndTime { get; set; }
+		public string Location { get; set; }
+		public int Salary {  get; set; }
+		public int ViewCount { get; set; }
+		public bool IsDeleted { get; set; }
+        public DateTime? LastReActivateTime { get; set; }
+
     }
 }

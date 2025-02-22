@@ -1,0 +1,300 @@
+﻿@using JoberDesk.Business.DTOs.Company
+@model GetCompanyDto
+
+<div class="company-container">
+    <div class="company-header">
+        <div class="logo-container">
+            <img src="~/Upload/Company/@Model.Logo" alt="Şirkət Şəkli" class="company-logo">
+        </div>
+        <div class="company-info">
+            <h1>@Model.CompanyName</h1>
+            <div class="industry-list">
+                @foreach (var item in Model.IndustryCompanies)
+                {
+                    <a href="@Url.Action("Index", "Companies", new { search = "", industryId = item.Industry.Id })" class="industry-link">
+                        <strong>@item.Industry.Name</strong>
+                    </a>
+                    if (Model.IndustryCompanies.Last() != item)
+                    {
+                        <span>, </span>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="section-buttons">
+        <button class="tab-btn active" data-target="about-section">Şirkət Haqqında</button>
+        <button class="tab-btn" data-target="jobs-section">Son İş Elanları</button>
+    </div>
+
+    <div class="sections">
+        <div class="section" id="about-section">
+            <h2 style="color:black;">Şirkət Haqqında</h2>
+            <div class="info">
+                <div>
+                    <strong style="color:#555">Şirkət haqqında:</strong>
+                    <div style="margin-left: 30px; margin-top: 5px;">@Html.Raw(Model.About)</div>
+                </div>
+
+                <p><strong style="color:#555">Ünvan:</strong> @Model.Address</p>
+                @if (!string.IsNullOrEmpty(Model.Website))
+                {      
+                    <p><strong style="color:#555">Vebsayt:</strong> <a style="color:cornflowerblue" href="@Model.Website" target="_blank">@Model.Website</a></p>
+                }
+@*                 <p><strong style="color:#555">Email:</strong> <a href="mailto:@Model.AppUser.Email">@Model.AppUser.Email</a></p>
+ *@            </div>
+        </div>
+
+
+        @{
+            var jobs = Model.Jobs.Take(3).OrderByDescending(x=>x.IsPremium==true);
+        }
+        <div class="section hidden" id="jobs-section">
+            <h2>Son İş Elanları</h2>
+            <ul class="job-listing">
+                
+                @foreach (var vacancy in jobs)
+                {
+                    <li class="job-listing d-flex align-items-center p-3 position-relative @(vacancy.IsPremium ? "premium-job" : "")">
+                       
+                        <div class="job-listing-about d-flex flex-column justify-content-center ml-3">
+                            <h2 class="company-name mb-1">
+                                <a asp-action="VacancyDetail" asp-controller="Vacancies" asp-route-id="@vacancy.Id">@vacancy.Name</a>
+                            </h2>
+                            <p>
+                                <span class="company-naame">
+                                    <i style="margin-right:5px" class="fa fa-briefcase"></i>
+                                    <a asp-action="CompanyDetail" asp-controller="Companies" asp-route-id="@vacancy.CompanyId">@vacancy.Company.CompanyName</a>
+                                </span>
+                                <span class="company-location">
+                                    <i style="margin-left:5px" class="fa fa-map-marker"></i> @vacancy.Location
+                                </span>
+                                @if (vacancy.Salary != 0)
+                                {
+                                    <span class="package">
+                                        <i style="margin-left:5px;margin-right:5px;" class="fa fa-money"></i>@vacancy.Salary ₼
+                                    </span>
+                                }
+                            </p>
+                            <p class="job-views">
+                                <i class="fa fa-eye"></i> @vacancy.ViewCount baxış
+                            </p>
+                            <p class="job-date">
+                                <i class="fa fa-calendar"></i> @vacancy.CreatedAt.ToString("dd.MM.yyyy")
+                            </p>
+                        </div>
+                        <div class="job-meta d-flex flex-column align-items-center">
+                            @if (vacancy.IsPremium)
+                            {
+                                <span class="premium-badge">Premium</span>
+                            }
+                            <span class="job-type">@vacancy.EmploymentType.ToString()</span>
+                        </div>
+                    </li>
+                }
+            </ul> 
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .job-date {
+        font-size: 14px;
+        color: #666;
+        margin-top: 5px;
+    }
+
+    ul.job-listing {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; 
+    }
+
+    .job-listing {
+        background: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        justify-content: space-between;
+        cursor: pointer;
+        width: 100%;
+        max-width: 600px; 
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #ddd;
+        height: auto; 
+    }
+
+        .job-listing:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+            background: #f1f1f1;
+        }
+
+    .job-listing-about {
+        flex: 1;
+        margin-left: 10px;
+    }
+
+        .job-listing-about h2 {
+            font-size: 18px;
+            margin-bottom: 3px;
+            font-weight: bold;
+        }
+
+        .job-listing-about p {
+            font-size: 14px;
+            color: #555;
+            margin: 2px 0;
+            line-height: 1.4;
+        }
+
+    
+    .package {
+        font-weight: bold;
+        color: dimgray;
+    }
+
+ 
+    .job-views {
+        font-size: 14px;
+        color: #777;
+    }
+
+    
+    .premium-badge {
+        background-color: red;
+        color: white;
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .premium-job {
+        border: 2px solid red;
+        border-radius: 5px;
+    }
+
+    .job-meta {
+        text-align: center;
+        min-width: 100px;
+    }
+    .company-container {
+        width: 80%;
+        margin: 20px auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .company-header {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        background: #f4f4f4;
+        border-radius: 8px;
+    }
+
+    .logo-container {
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .company-logo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .company-info {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+        .company-info h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .company-info p {
+            margin: 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+    .section-buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .tab-btn {
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        background: #007BFF;
+        color: white;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+        .tab-btn:hover {
+            background: #0056b3;
+        }
+
+        .tab-btn.active {
+            background: #004494;
+        }
+
+    .sections {
+        margin-top: 20px;
+    }
+
+    .section {
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".tab-btn");
+        const sections = document.querySelectorAll(".section");
+
+        buttons.forEach(button => {
+            button.addEventListener("click", function () {
+               
+                sections.forEach(section => section.classList.add("hidden"));
+
+                buttons.forEach(btn => btn.classList.remove("active"));
+
+                const target = this.getAttribute("data-target");
+                document.getElementById(target).classList.remove("hidden");
+
+                this.classList.add("active");
+            });
+        });
+    });
+</script>

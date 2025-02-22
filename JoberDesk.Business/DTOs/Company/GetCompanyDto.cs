@@ -13,6 +13,7 @@ namespace JoberDesk.Business.DTOs.Company
 	{
 		public int Id { get; set; }
 		public string AppUserId { get; set; }
+		public AppUser? AppUser { get; set; }
         public string CompanyName { get; set; }
         public string Address { get; set; }
 		public string Website { get; set; }
@@ -20,6 +21,11 @@ namespace JoberDesk.Business.DTOs.Company
 		public string Logo { get; set; }
         public ICollection<IndustryCompany> IndustryCompanies { get; set; }
         public ICollection<GetJobDto> Jobs { get; set; }
-	}
+		public bool IsConfirmedByAdmin { get; set; }
+		public DateTime? CreatedAt { get; set; }
+        public string? LastRejectionReason { get; set; }
+        public DateTime? LastRejectionTime { get; set; }
+		public DateTime UpdatedAt { get; set; }
+    }
 
 }

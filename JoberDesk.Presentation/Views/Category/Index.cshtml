@@ -19,13 +19,11 @@
                     @Html.Raw(item.Icon)
 
 
-                    <h5 class="mb-0 flex-grow-1"><a asp-action="Index" asp-controller="Home">@item.Name</a></h5>
+                    <h5  class="mb-0 flex-grow-1"><a asp-action="Index" asp-controller="Home" asp-route-categoryId="@item.Id">@item.Name</a></h5>
 
-
-                    <div class="text-end">
-                        <p class="mb-0 text-muted"><strong>@item.Jobs.Count Vakansiya</strong></p>
-                   
-                    </div>
+                     <div class="text-end">
+                        <p class="mb-0 text-muted"><strong>@* @item.Jobs.Count Vakansiya *@</strong></p>
+                    </div> 
                 </div>
             }
         </div>

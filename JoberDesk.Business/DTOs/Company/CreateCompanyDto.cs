@@ -42,7 +42,9 @@ namespace JoberDesk.Business.DTOs.Company
                 .MinimumLength(3)
                 .WithMessage("Keçid ən azı 3 simvoldan ibarət olmalıdır.")
                 .MaximumLength(250)
-                .WithMessage("Keçid ən çox 250 simvoldan ibarət ola bilər.");
+                .WithMessage("Keçid ən çox 250 simvoldan ibarət ola bilər.")
+                .Matches(@"^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$")
+                .WithMessage("Düzgün URL formatı daxil edin. (Məsələn, https://example.com)");
             RuleFor(x => x.About)
                 .Must(value => !string.IsNullOrWhiteSpace(value) && value.Trim() != "<p><br></p>")
                 .WithMessage("Şirkət haqqında məlumat daxil edin.")

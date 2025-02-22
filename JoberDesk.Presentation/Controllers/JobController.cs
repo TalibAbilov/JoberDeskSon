@@ -57,24 +57,40 @@ namespace JoberDesk.Presentation.Controllers
 		}
         public async Task<IActionResult> MyVacancies()
 		{
-            var user = await _userService.GetCurrentUser(User);
-            if (user.CompanyId == null)
+            try
             {
-                return RedirectToAction("Create", "Company");
+
+                var user = await _userService.GetCurrentUser(User);
+                if (user.CompanyId == null)
+                {
+                    return RedirectToAction("Create", "Company");
+                }
+			    var vacancies=await _jobService.FindAll(x=>x.CompanyId == user.CompanyId.Value,"Category");
+			    return View(vacancies);
             }
-			var vacancies=await _jobService.FindAll(x=>x.CompanyId == user.CompanyId.Value,"Category");
-			return View(vacancies);
-		}
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 		public async Task<IActionResult> Create()
 		{
-			ViewBag.Categories = await _categoryService.GetAll();
-            var user = await _userService.GetCurrentUser(User);
-            if (user.CompanyId == null)
+            try
             {
-                return RedirectToAction("Create", "Company");
+
+			    ViewBag.Categories = await _categoryService.GetAll();
+                var user = await _userService.GetCurrentUser(User);
+                if (user.CompanyId == null)
+                {
+                    return RedirectToAction("Create", "Company");
+                }
+                return View();
             }
-            return View();
-		}
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 		[HttpPost]
 		public async Task<IActionResult>Create(CreateJobDto dto, string stripeEmail, string stripeToken)
 		{
@@ -93,6 +109,11 @@ namespace JoberDesk.Presentation.Controllers
 				await _jobService.Create(dto,stripeEmail,stripeToken);
 				return RedirectToAction(nameof(MyVacancies));
 			}
+            catch(JobEndTimeExpireException ex)
+            {
+                ModelState.AddModelError("EndTime", ex.Message);
+                return View(dto);
+            }
 			catch (Exception ex)
 			{
 				return BadRequest(ex.Message);
@@ -139,6 +160,11 @@ namespace JoberDesk.Presentation.Controllers
                 
                 await _jobService.Update(dto);
                 return RedirectToAction(nameof(MyVacancies));
+            }
+            catch (JobEndTimeExpireException ex)
+            {
+                ModelState.AddModelError("EndTime", ex.Message);
+                return View(dto);
             }
             catch (Exception ex)
             {
@@ -222,6 +248,49 @@ namespace JoberDesk.Presentation.Controllers
             {
                 ModelState.AddModelError("", ex.Message);
                 return View();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        public async Task<IActionResult> Activate(int id)
+        {
+            var user = await _userService.GetCurrentUser(User);
+            if (user.CompanyId == null)
+            {
+                return RedirectToAction("Create", "Company");
+            }
+            var company = await _companyService.GetById(user.CompanyId.Value, "Jobs");
+            if (company == null)
+            {
+                throw new Exception("Sirket tapilmadi");
+            }
+            if (!company.Jobs.Any(job => job.Id == id))
+            {
+                return RedirectToAction(nameof(MyVacancies));
+            }
+            try
+            {
+                var job = await _jobService.GetById(id);
+                return View(job);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpPost]
+        public async Task<IActionResult> Activate(int id, string stripeEmail, string stripeToken)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            try
+            {
+                await _jobService.ReActivate(id, stripeEmail, stripeToken);
+                return RedirectToAction(nameof(MyVacancies));
             }
             catch (Exception ex)
             {

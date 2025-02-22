@@ -74,6 +74,7 @@ namespace JoberDesk.Business.Services.Implementations
             var link = _linkGenerator.GetUriByAction(httpContext, "SubmitRegistration", "Auth", obj);
             MailRequest request = new MailRequest()
             {
+                
                 ToEmail = dto.Email,
                 Subject = "Hesabın təsdqilənməsi",
                 Body = $"<a href='{link}'>Hesabınızı təsdiqləyin</a>"

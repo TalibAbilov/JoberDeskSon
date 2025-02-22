@@ -16,7 +16,16 @@
                 <input asp-for="Name" type="text" class="form-control" placeholder="Vakansiya adını daxil edin...">
                 <span asp-validation-for="Name" style="color:red"></span>
             </div> *@
-
+            <div class="form-group">
+                <label asp-for="Location">Vakansiya ünvanı</label>
+                <input asp-for="Location" type="text" class="form-control" placeholder="Vakansiya ünvanı daxil edin...">
+                <span asp-validation-for="Location" style="color:red"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary">Maaş(məcburi deyil)</label>
+                <input asp-for="Salary" type="number" class="form-control" placeholder="Maaş daxil edin...">
+                <span asp-validation-for="Salary" style="color:red"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="CategoryId">Vakansiya kateqoriyası.</label>
 

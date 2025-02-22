@@ -17,7 +17,11 @@ namespace JoberDesk.DAL.Configurations
 				.Property(x => x.Name)
 				.IsRequired()
 				.HasMaxLength(250);
-			builder
+            builder
+                .Property(x => x.Location)
+                .IsRequired()
+                .HasMaxLength(250);
+            builder
 				.Property(x => x.Description)
 				.IsRequired()
 				.HasMaxLength(2000);
@@ -48,6 +52,7 @@ namespace JoberDesk.DAL.Configurations
                 .WithMany(x=>x.Jobs)
                 .HasForeignKey(x => x.CompanyId)
                 .OnDelete(DeleteBehavior.Restrict);
+
         }
 	}
 }

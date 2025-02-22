@@ -18,7 +18,10 @@ namespace JoberDesk.Business.DTOs.Company
 		
 		public IFormFile? file { get; set; }
 		public List<int>? IndustryIds { get; set; }
-	}
+		public bool IsConfirmedByAdmin { get; set; }
+        public string? LastRejectionReason { get; set; }
+        public DateTime? LastRejectionTime { get; set; }
+    }
 	public class UpdateCompanyDtoValidator : AbstractValidator<UpdateCompanyDto>
 	{
 		public UpdateCompanyDtoValidator()
@@ -32,9 +35,14 @@ namespace JoberDesk.Business.DTOs.Company
                 .WithMessage("Şirkət adı ən azı 3 simvoldan ibarət olmalıdır.")
                 .MaximumLength(250)
                 .WithMessage("Şirkət adı ən çox 250 simvoldan ibarət ola bilər.");
-			RuleFor(x => x.About)
-				.MinimumLength(10).WithMessage("Min uzunluq 3");
-			RuleFor(x => x.IndustryIds)
+            RuleFor(x => x.About)
+                .Must(value => !string.IsNullOrWhiteSpace(value) && value.Trim() != "<p><br></p>")
+                .WithMessage("Şirkət haqqında məlumat daxil edin.")
+                .MinimumLength(10)
+                .WithMessage("Şirkət haqqında məlumat ən azı 3 simvoldan ibarət olmalıdır.")
+                .MaximumLength(1000)
+                .WithMessage("Şirkət haqqında məlumat ən çox 1000 simvoldan ibarət ola bilər.");
+            RuleFor(x => x.IndustryIds)
 					.NotEmpty()
 					.WithMessage("Sənaye tipləri seç")
 					.NotNull()

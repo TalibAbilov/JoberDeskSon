@@ -20,6 +20,9 @@ namespace JoberDesk.Business.DTOs.Job
 		public ExperienceLevel? ExperienceLevel { get; set; }
 		public EducationLevel? EducationLevel { get; set; }
 		public DateTime? CreatedAt { get; set; }
+		public string? Location { get; set; }
+		public int? Salary { get; set; }
+
 	}
 	public class CreateJobDtoValidator : AbstractValidator<CreateJobDto>
 	{
@@ -34,7 +37,16 @@ namespace JoberDesk.Business.DTOs.Job
 				.WithMessage("Vakansiya adı ən azı 5 simvoldan ibarət olmalıdır.")
 				.MaximumLength(250)
 				.WithMessage("Vakansiya adı ən çox 250 simvoldan ibarət ola bilər.");
-			RuleFor(x => x.CategoryId)
+            RuleFor(x => x.Location)
+                .NotNull()
+                .WithMessage("Ünvan boş ola bilməz.")
+                .NotEmpty()
+                .WithMessage("Ünvan daxil edin.")
+                .MinimumLength(5)
+                .WithMessage("Ünvan ən azı 5 simvoldan ibarət olmalıdır.")
+                .MaximumLength(250)
+                .WithMessage("Ünvan ən çox 250 simvoldan ibarət ola bilər.");
+            RuleFor(x => x.CategoryId)
 				.NotNull()
 				.WithMessage("Vakansiya kateqoriyasını seçin.")
 				.NotEmpty()
@@ -75,6 +87,10 @@ namespace JoberDesk.Business.DTOs.Job
 				.WithMessage("Minumum təcrübə tələbini seç.")
 				.NotEmpty()
 				.WithMessage("Minumum təcrübə tələbini seç.");
+			
+			RuleFor(x => x.Salary)
+				.GreaterThanOrEqualTo(0)
+				.WithMessage("Maaş 0-dan kiçik ola bilməz.");
 		}
 	}
 }

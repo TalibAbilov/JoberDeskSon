@@ -30,6 +30,8 @@ namespace JoberDesk.Business
             services.AddControllers().AddFluentValidation(x => x.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly()));
             services.AddAutoMapper(typeof(BusinessServiceRegistrations));
             services.AddHostedService<PremiumJobCheckerService>();
+            services.AddHostedService<JobEndTimeCheckerService>();
+
 
         }
     }

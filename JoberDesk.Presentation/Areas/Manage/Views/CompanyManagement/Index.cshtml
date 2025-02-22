@@ -1,0 +1,68 @@
+﻿@using JoberDesk.Business.DTOs.Company
+@model List<GetCompanyDto>
+
+@{
+    int count = 0;
+    string selectedFilter = ViewBag.SelectedFilter ?? "all";
+}
+
+<section class="my-jobs-section">
+    <div class="container">
+        <h2>Şirkətlər</h2>
+
+        <form method="get">
+            <label for="filter">Filtr:</label>
+            <select id="filter" name="filter" class="form-select w-auto d-inline-block" onchange="this.form.submit()">
+                <option value="all" selected="@(selectedFilter == "all")">Hamısı</option>
+                <option value="confirmed" selected="@(selectedFilter == "confirmed")">Təsdiqlənmişlər</option>
+                <option value="unconfirmed" selected="@(selectedFilter == "unconfirmed")">Təsdiqlənməmişlər</option>
+            </select>
+
+        </form>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Id</th>
+                    <th>Loqo</th>
+                    <th>Ad</th>
+                    <th>E-poçt adresi</th>
+                    <th>Yaradılma tarixi</th>
+                    <th>Əməliyyat</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    count++;
+                    <tr>
+                        <td>@count</td>
+                        <td>@item.Id</td>
+                        <td>
+                            <div style="width:100px">
+                                <img style="width:100%" src="~/Upload/Company/@item.Logo" />
+                            </div>
+                        </td>
+                        <td>@item.CompanyName</td>
+                        <td>@item.AppUser?.Email</td>
+                        <td>@item.CreatedAt</td>
+                        <td>
+                            <a asp-action="CompanyDetail" asp-controller="CompanyManagement" asp-route-id="@item.Id"
+                                class="btn btn-secondary btn-sm shadow-sm hover-scale">
+                                <i class="fas fa-eye"></i> Ətraflı bax
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<style>
+    .hover-scale:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+</style>

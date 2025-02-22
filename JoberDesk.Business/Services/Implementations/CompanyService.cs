@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using JoberDesk.Business.DTOs.Category;
 using JoberDesk.Business.DTOs.Company;
+using JoberDesk.Business.DTOs.Industry;
 using JoberDesk.Business.Helpers.Exceptions.Base;
 using JoberDesk.Business.Helpers.Exceptions.Category;
 using JoberDesk.Business.Helpers.Exceptions.Company;
@@ -14,6 +15,7 @@ using Stripe;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -148,6 +150,13 @@ namespace JoberDesk.Business.Services.Implementations
             await _rep.SaveChangesAsync();
         }
 
+        public async Task<List<GetCompanyDto>> FindAll(Expression<Func<Company, bool>> expression, params string[] includes)
+        {
+            
+                var companies = await _rep.FindAll(expression, includes).ToListAsync();
+                return _mapper.Map<List<GetCompanyDto>>(companies);
+        }
+
         public async Task<List<GetCompanyDto>> GetAll(params string[] includes)
         {
             var companies = await _rep.GetAll(includes).ToListAsync();
@@ -216,9 +225,21 @@ namespace JoberDesk.Business.Services.Implementations
             {
                 dto.About = company.About;
             }
-            
+            if (dto.IsConfirmedByAdmin)
+            {
+                dto.IsConfirmedByAdmin = true;
+            }
+            else
+            {
+                dto.IsConfirmedByAdmin = false;
+                if (dto.LastRejectionTime == null && dto.LastRejectionTime == null)
+                {
+                    dto.LastRejectionReason = company.LastRejectionReason;
+                    dto.LastRejectionTime = company.LastRejectionTime;
+                }
+            }
 			_mapper.Map(dto,company);
-             _rep.Update(company);
+            _rep.Update(company);
             company.UpdatedAt = DateTime.Now;
 			await _rep.SaveChangesAsync();
 

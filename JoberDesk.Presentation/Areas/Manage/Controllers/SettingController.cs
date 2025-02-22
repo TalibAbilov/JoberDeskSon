@@ -24,10 +24,18 @@ namespace JoberDesk.Presentation.Areas.Manage.Controllers
 
 		public IActionResult Index()
 		{
-			var settings =_layoutService.GetSetting();
+			try
+			{
 
-			return View(settings);
-		}
+				var settings =_layoutService.GetSetting();
+
+				return View(settings);
+			}
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 		public IActionResult Create()
 		{
 			return View();
@@ -69,16 +77,24 @@ namespace JoberDesk.Presentation.Areas.Manage.Controllers
 		}
 		public async Task<IActionResult> Update(string key)
 		{
-			var setting = await _layoutService.GetByKey(key);
-			if (setting == null)
+			try
 			{
-				return NotFound();
-			}
 
-			var dto=_mapper.Map<UpdateSettingDto>(setting);
+				var setting = await _layoutService.GetByKey(key);
+				if (setting == null)
+				{
+					return NotFound();
+				}
+
+				var dto=_mapper.Map<UpdateSettingDto>(setting);
 		
-			return View(dto);
-		}
+				return View(dto);
+			}
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
 		[HttpPost]
 		public async Task<IActionResult> Update(UpdateSettingDto dto)
 		{

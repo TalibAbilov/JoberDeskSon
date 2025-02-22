@@ -27,14 +27,22 @@ namespace JoberDesk.Presentation.Controllers
 
 		public async Task<IActionResult> Create()
         {
-            ViewBag.Industries= await _industryService.GetAll();
-            return View();
+            try
+            {
+
+                ViewBag.Industries= await _industryService.GetAll();
+                return View();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
         [HttpPost]
         public async Task<IActionResult> Create(CreateCompanyDto dto, string stripeEmail, string stripeToken)
         {
-            ViewBag.Industries =await  _industryService.GetAll();
-            var user=await _userService.GetCurrentUser(User);
+                ViewBag.Industries =await  _industryService.GetAll();
+                var user=await _userService.GetCurrentUser(User);
             if (!ModelState.IsValid)
             {
                 return View(dto);
@@ -67,13 +75,21 @@ namespace JoberDesk.Presentation.Controllers
         }
         public async Task<IActionResult> Profile()
         {
-            var user = await _userService.GetCurrentUser(User);
-            if (user.CompanyId == null)
+            try
             {
-                return RedirectToAction("Create", "Company");
+
+                var user = await _userService.GetCurrentUser(User);
+                if (user.CompanyId == null)
+                {
+                    return RedirectToAction("Create", "Company");
+                }
+                var company = await _companyService.GetById(user.CompanyId.Value,"AppUser","Jobs", "IndustryCompanies", "IndustryCompanies.Industry");
+                return View(company);
             }
-            var company = await _companyService.GetById(user.CompanyId.Value,"Jobs", "IndustryCompanies", "IndustryCompanies.Industry");
-            return View(company);
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
         public async Task<IActionResult> Update(int id)
         {

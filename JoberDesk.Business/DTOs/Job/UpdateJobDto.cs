@@ -20,16 +20,29 @@ namespace JoberDesk.Business.DTOs.Job
 		public EmploymentType? EmploymentType { get; set; }
 		public ExperienceLevel? ExperienceLevel { get; set; }
 		public EducationLevel? EducationLevel { get; set; }
+        public string? Location { get; set; }
+        public int? Salary {  get; set; }   
+        public int ViewCount { get; set; }
+
     }
     public class UpdateJobDtoValidator : AbstractValidator<UpdateJobDto>
     {
         public UpdateJobDtoValidator()
         {
-        //    RuleFor(x => x.Name)
-        //        .MinimumLength(5)
-        //        .WithMessage("Vakansiya adı ən azı 5 simvoldan ibarət olmalıdır.")
-        //        .MaximumLength(250)
-        //        .WithMessage("Vakansiya adı ən çox 250 simvoldan ibarət ola bilər.");
+            //    RuleFor(x => x.Name)
+            //        .MinimumLength(5)
+            //        .WithMessage("Vakansiya adı ən azı 5 simvoldan ibarət olmalıdır.")
+            //        .MaximumLength(250)
+            //        .WithMessage("Vakansiya adı ən çox 250 simvoldan ibarət ola bilər.");
+            RuleFor(x => x.Location)
+                .NotNull()
+                .WithMessage("Vakansiya adı boş ola bilməz.")
+                .NotEmpty()
+                .WithMessage("Vakansiya adı daxil edin.")
+                  .MinimumLength(5)
+                  .WithMessage("Ünvan ən azı 5 simvoldan ibarət olmalıdır.")
+                  .MaximumLength(250)
+                  .WithMessage("Ünvan ən çox 250 simvoldan ibarət ola bilər.");
             RuleFor(x => x.CategoryId)
                 .NotNull()
                 .WithMessage("Vakansiya kateqoriyasını seçin.")
@@ -39,14 +52,14 @@ namespace JoberDesk.Business.DTOs.Job
                 .Must(value => !string.IsNullOrWhiteSpace(value) && value.Trim() != "<p><br></p>")
                 .WithMessage("Vakansiya haqqında məlumat daxil edin.")
                 .MinimumLength(10)
-                .WithMessage("Vakansiya haqqında məlumat ən azı 10 simvoldan ibarət olmalıdır.")
+                .WithMessage("Vakansiya haqqında məlumat ən azı 3 simvoldan ibarət olmalıdır.")
                 .MaximumLength(1000)
                 .WithMessage("Vakansiya haqqında məlumat ən çox 1000 simvoldan ibarət ola bilər.");
             RuleFor(x => x.Requirements)
                 .Must(value => !string.IsNullOrWhiteSpace(value) && value.Trim() != "<p><br></p>")
                 .WithMessage("Vakansiya tələblərini daxil edin.")
                 .MinimumLength(10)
-                .WithMessage("Vakansiya tələbləri ən azı 10 simvoldan ibarət olmalıdır.")
+                .WithMessage("Vakansiya tələbləri ən azı 3 simvoldan ibarət olmalıdır.")
                 .MaximumLength(1000)
                 .WithMessage("Vakansiya haqqında məlumat ən çox 1000 simvoldan ibarət ola bilər.");
             RuleFor(x => x.EndTime)
@@ -71,6 +84,9 @@ namespace JoberDesk.Business.DTOs.Job
                 .WithMessage("Minumum təcrübə tələbini seç.")
                 .NotEmpty()
                 .WithMessage("Minumum təcrübə tələbini seç.");
-        }
+			RuleFor(x => x.Salary)
+				.GreaterThanOrEqualTo(0)
+				.WithMessage("Maaş 0-dan kiçik ola bilməz.");
+		}
     }
 }

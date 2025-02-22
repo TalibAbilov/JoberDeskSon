@@ -22,7 +22,7 @@ namespace JoberDesk.Presentation.Areas.Manage.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var data=await _service.GetAll();
+            var data=await _service.GetAll("Jobs");
             return View(data);
         }
         public IActionResult Create()
@@ -45,6 +45,10 @@ namespace JoberDesk.Presentation.Areas.Manage.Controllers
             {
                 ModelState.AddModelError("Name",ex.Message);
                 return View(dto); 
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
         public async Task<IActionResult> Update(int id)
@@ -75,6 +79,10 @@ namespace JoberDesk.Presentation.Areas.Manage.Controllers
             {
                 ModelState.AddModelError("Name", ex.Message);
                 return View(dto);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
         }
         public async Task<IActionResult>Delete(int id)

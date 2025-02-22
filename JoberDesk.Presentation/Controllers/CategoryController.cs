@@ -19,8 +19,15 @@ namespace JoberDesk.Presentation.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var categories = await _categoryService.GetAll("Jobs");
-            return View(categories);
+            try
+            {
+                var categories = await _categoryService.GetAll("Jobs");
+                return View(categories);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

@@ -16,12 +16,11 @@ namespace JoberDesk.Core.Entities
 		public string About { get; set; }
 		public string Logo { get; set; }
 		public bool IsConfirmedByAdmin { get; set; }
-		public ICollection<IndustryCompany> IndustryCompanies { get; set; }
+        public string? LastRejectionReason { get; set; }
+		public DateTime? LastRejectionTime { get; set; }
+        public ICollection<IndustryCompany> IndustryCompanies { get; set; }
 		public ICollection<Job> Jobs { get; set; }
 		public string AppUserId { get; set; }
 		public AppUser AppUser { get; set; }
-		public bool IsPremium { get; set; }
-        public DateTime? PremiumUntil { get; set; }
-
     }
 }

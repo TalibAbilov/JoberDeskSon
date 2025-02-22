@@ -33,6 +33,16 @@
 								<li><span>Tələb olunun minumum iş təcrübəsi:</span>@Model.ExperienceLevel.ToString()</li>
 								<li><span>Tələb olunun minumum təhsil:</span>@Model.EducationLevel.ToString()</li>
 								<li><span>İş növü:</span>@Model.EmploymentType.ToString()</li>
+								<li><span>Ünvan:</span>@Model.Location</li>
+								@if (Model.Salary == 0)
+								{
+									<li><span>Maaş:</span>Razılaşma yolu ilə</li>
+								}
+								else
+								{
+									<li><span>Maaş:</span>@Model.Salary</li>
+
+								}
 							</ul>
 						</div>
 					</div>

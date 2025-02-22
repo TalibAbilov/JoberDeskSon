@@ -1,0 +1,82 @@
+﻿@using JoberDesk.Business.DTOs.Company
+@model GetCompanyDto
+@{
+    int step = 0;
+}
+<div class="container mt-4">
+    <h2 class="mb-4">Şirkət Məlumatları</h2>
+
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h3>@Model.CompanyName</h3>
+            <h6>@Model.AppUser?.Email</h6>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="~/Upload/Company/@Model.Logo" alt="Şirkət Logo" class="img-fluid rounded border shadow-sm" />
+                </div>
+                <div class="col-md-8">
+
+                    <span><strong>Sənaye tipləri:</strong></span>
+                        @foreach (var item in Model.IndustryCompanies)
+                        {
+                            step += 1;
+                            if (Model.IndustryCompanies.Count > step)
+                            {
+                                <a asp-action="Index" asp-controller="Category" style="color:red">@item.Industry.Name ,</a>
+
+                            }
+                            else
+                            {
+                                <a asp-action="Index" asp-controller="Category" style="color:red">@item.Industry.Name</a>
+
+                            }
+
+                        }
+                    
+                    <p><strong>Ünvan:</strong> @Model.Address</p>
+                    <p>
+
+                        @if (!string.IsNullOrEmpty(Model.Website))
+                        {
+                            <span><strong>Vebsayt:</strong></span>
+                            <a href="@Model.Website" target="_blank" class="website-link">
+                                @Model.Website
+                            </a>
+                        }
+                    </p>
+                    
+                    <p><strong>Yaradılma Tarixi:</strong> @Model.CreatedAt</p>
+
+                    <p><strong>Təsdiq Statusu:</strong> @(Model.IsConfirmedByAdmin ? "Təsdiqlənib ✅" : "Təsdiqlənməyib ❌")</p>
+                </div>
+            </div>
+            <p><strong>Haqqında:</strong> @Html.Raw(Model.About)</p>
+            @if (Model.LastRejectionTime!=null)
+            {
+                <hr />
+                <p><strong style="color:dimgray">Səbəbin göndərildiyi tarix:</strong> @Model.LastRejectionTime</p>
+                <p style ="color:red" ><strong style="color:dimgray">Təsdiqlənməmə səbəbi:</strong> @Model.LastRejectionReason</p>
+            }
+        </div>
+    </div>
+
+    <div class="mt-4" style="margin-bottom:100px">
+        @if (Model.IsConfirmedByAdmin == false)
+        {
+            <a asp-action="ConfirmCompany" asp-route-id="@Model.Id" class="btn btn-success">
+                <i class="fas fa-check"></i> Şirkəti Təsdiqlə
+            </a>
+        }
+        
+            <a asp-action="SendRejectionMessage" asp-route-id="@Model.Id" class="btn btn-danger">
+                <i class="fas fa-envelope"></i> Təsdiq edilməmə səbəbi göndər
+            </a>
+        
+
+        <a asp-action="Index" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Geri Qayıt
+        </a>
+    </div>
+</div>

@@ -46,7 +46,6 @@ namespace JoberDesk.DAL.Repositories.Implementations
             {
                 query = query.Include(include);
             }
-
             return expression != null ? query.Where(expression) : query;
         }
 
@@ -85,6 +84,12 @@ namespace JoberDesk.DAL.Repositories.Implementations
             return await _context.SaveChangesAsync();
         }
 
+        public void SoftDelete(TEntity entity)
+        {
+            entity.IsDeleted = true;
+            Table.Update(entity);
+        }
+            
         public void Update(TEntity entity)
         {
             Table.Update(entity);

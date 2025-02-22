@@ -3,8 +3,6 @@
 
 @{
     ViewData["Title"] = "Mənim Vakansiyalarım";
-}
-@{
     int count = 0;
 }
 
@@ -14,6 +12,13 @@
 
         <div class="text-end mb-3">
             <a href="/job/create" class="btn btn-success">+ Yeni Vakansiya Yarat</a>
+        </div>
+
+   
+        <div class="mb-4">
+            <button class="btn btn-outline-primary active" onclick="filterJobs('all')">Hamısı</button>
+            <button class="btn btn-outline-success" onclick="filterJobs('active')">Aktiv</button>
+            <button class="btn btn-outline-danger" onclick="filterJobs('inactive')">Deaktiv</button>
         </div>
 
         <table class="table table-striped">
@@ -26,20 +31,20 @@
                     <th>Premium bitmə tarixi</th>
                     <th>Paylaşıldığı tarix</th>
                     <th>Bitmə tarixi</th>
+                    <th>Son aktiv edildiyi tarix</th>
                     <th>Əməliyyat</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="jobs-table-body">
                 @foreach (var item in Model)
                 {
                     count++;
-                    <tr>
+                    <tr data-status="@(item.IsDeleted ? "inactive" : "active")">
                         <td>@count</td>
-
                         <td>@item.Name</td>
                         <td>@item.Category.Name</td>
                         @if (item.IsPremium)
-                            {
+                        {
                             <td>Bəli</td>
                             <td>@item.PremiumEndTime.ToString("dd/MM/yyyy")</td>
                         }
@@ -48,9 +53,17 @@
                             <td>Xeyr</td>
                             <td>-</td>
                         }
-
                         <td>@item.CreatedAt.ToString("dd/MM/yyyy")</td>
                         <td>@item.EndTime.ToString("dd/MM/yyyy")</td>
+                        @if (item.LastReActivateTime != null)
+                        {
+                            
+                        <td>@item.LastReActivateTime.Value.ToString("dd/MM/yyyy")</td>
+                        }
+                        else
+                        {
+                            <td>Yoxdur</td>
+                        }    
                         <td>
                             <a asp-action="Delete" asp-controller="Job" asp-route-id="@item.Id" class="btn btn-danger btn-lg w-100 mb-2 shadow-sm hover-scale">
                                 <i class="fas fa-trash-alt"></i> Sil
@@ -61,10 +74,19 @@
                             <a asp-action="Update" asp-controller="Job" asp-route-id="@item.Id" class="btn btn-primary btn-lg w-100 mb-2 shadow-sm hover-scale">
                                 <i class="fas fa-edit"></i> Vakansiyani redaktə et
                             </a>
-                            <a asp-action="MakePremium" asp-controller="Job" asp-route-id="@item.Id" class="btn btn-success btn-lg w-100 mb-2 shadow-sm hover-scale">
-                                <i class="fas fa-star"></i> Vakansiyani premium et
-                            </a>
-
+                            @if (item.IsDeleted)
+                            {
+                                <a asp-action="Activate" asp-controller="Job" asp-route-id="@item.Id" class="btn btn-warning btn-lg w-100 mb-2 shadow-sm hover-scale">
+                                    <i class="fas fa-check-circle"></i> Aktiv Et
+                                </a>
+                            }
+                            @if (item.IsPremium == false)
+                            {
+                                
+                                <a asp-action="MakePremium" asp-controller="Job" asp-route-id="@item.Id" class="btn btn-success btn-lg w-100 mb-2 shadow-sm hover-scale">
+                                    <i class="fas fa-star"></i> Vakansiyani premium et
+                                </a>
+                            }
                         </td>
                     </tr>
                 }
@@ -72,9 +94,86 @@
         </table>
     </div>
 </section>
+
 <style>
     .hover-scale:hover {
         transform: scale(1.05);
         transition: transform 0.2s ease-in-out;
     }
+
+    .btn {
+        display: inline-block;
+        font-weight: 400;
+        color: #212529;
+        text-align: center;
+        vertical-align: middle;
+        user-select: none;
+        background-color: transparent;
+        border: 1px solid transparent;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.25rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .btn-outline-primary {
+        color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-outline-success {
+        color: #28a745;
+        border-color: #28a745;
+    }
+
+    .btn-outline-danger {
+        color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .btn-outline-primary.active, .btn-outline-primary:active {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-outline-success.active, .btn-outline-success:active {
+        color: #fff;
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .btn-outline-danger.active, .btn-outline-danger:active {
+        color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
 </style>
+
+<script>
+    function filterJobs(status) {
+        const rows = document.querySelectorAll("#jobs-table-body tr");
+        rows.forEach(row => {
+            const rowStatus = row.getAttribute("data-status");
+            if (status === "all" || rowStatus === status) {
+                row.style.display = "";
+            } else {
+                row.style.display = "none";
+            }
+        });
+
+        document.querySelectorAll(".btn-outline-primary, .btn-outline-success, .btn-outline-danger").forEach(btn => {
+            btn.classList.remove("active");
+        });
+        if (status === "all") {
+            document.querySelector(".btn-outline-primary").classList.add("active");
+        } else if (status === "active") {
+            document.querySelector(".btn-outline-success").classList.add("active");
+        } else if (status === "inactive") {
+            document.querySelector(".btn-outline-danger").classList.add("active");
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => filterJobs("all"));
+</script>

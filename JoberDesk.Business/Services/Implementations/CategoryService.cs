@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using JoberDesk.Business.DTOs.Category;
+using JoberDesk.Business.DTOs.Company;
 using JoberDesk.Business.Helpers.Exceptions.Base;
 using JoberDesk.Business.Helpers.Exceptions.Category;
 using JoberDesk.Business.Services.Interfaces;
@@ -10,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,11 +22,13 @@ namespace JoberDesk.Business.Services.Implementations
     {
         readonly ICategoryRepository _rep;
         readonly IMapper _mapper;
+        readonly IJobService _jobService;
 
-        public CategoryService(ICategoryRepository rep, IMapper mapper)
+        public CategoryService(ICategoryRepository rep, IMapper mapper, IJobService jobService)
         {
             _rep = rep;
             _mapper = mapper;
+            _jobService = jobService;
         }
 
         public async Task Create(CreateCategoryDto dto)
@@ -49,6 +53,11 @@ namespace JoberDesk.Business.Services.Implementations
             if(category == null)
             {
                 throw new CategoryNotFoundException();
+            }
+            var jobs = await _jobService.GetAll();
+            if (jobs.Any(x=>x.CategoryId==id))
+            {
+                throw new Exception("Bu kateqoriyalı vakansiya mövcuddur!");
             }
             _rep.Delete(category);
             await _rep.SaveChangesAsync();
@@ -95,6 +104,12 @@ namespace JoberDesk.Business.Services.Implementations
             _rep.Update(newCategory);
             await _rep.SaveChangesAsync();
      
+        }
+        public async Task<List<GetCategoryDto>> FindAll(Expression<Func<Category, bool>> expression, params string[] includes)
+        {
+
+            var categories = await _rep.FindAll(expression, includes).ToListAsync();
+            return _mapper.Map<List<GetCategoryDto>>(categories);
         }
 
     }

@@ -82,10 +82,18 @@ namespace JoberDesk.Presentation.Controllers
         }
         public async Task<IActionResult> CreateRole()
         {
-            await _userService.CreateRole();
-            return RedirectToAction("Index", "Home");
+            try
+            {
 
-		}
+                await _userService.CreateRole();
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+
+        }
         public IActionResult ForgetPassword()
         {
             return View();
@@ -109,16 +117,24 @@ namespace JoberDesk.Presentation.Controllers
         }
         public IActionResult ResetPassword(string userId, string token)
         {
-            if (userId == null || token == null)
+            try
             {
-                return BadRequest();
+
+                if (userId == null || token == null)
+                {
+                    return BadRequest();
+                }
+                ResetPasswordDto dto = new ResetPasswordDto()
+                {
+                    userId = userId,
+                    token = token
+                };
+                return View(dto);
             }
-            ResetPasswordDto dto = new ResetPasswordDto()
+            catch (Exception ex)
             {
-                userId = userId,
-                token = token
-            };
-            return View(dto);
+                return BadRequest(ex.Message);
+            }
         }
         [HttpPost]
         public async Task<IActionResult> ResetPassword(ResetPasswordDto dto)
@@ -144,16 +160,24 @@ namespace JoberDesk.Presentation.Controllers
         }
         public IActionResult SubmitRegistration(string userId,string token)
         {
-            if(userId == null || token == null)
+            try
             {
-                return BadRequest();
+
+                if(userId == null || token == null)
+                {
+                    return BadRequest();
+                }
+                SubmitRegistrationDto dto = new SubmitRegistrationDto()
+                {
+                    UserId = userId,
+                    Token = token
+                };
+                return View(dto);
             }
-            SubmitRegistrationDto dto = new SubmitRegistrationDto()
+            catch (Exception ex)
             {
-                UserId = userId,
-                Token = token
-            };
-            return View(dto);
+                return BadRequest(ex.Message);
+            }
         }
         [HttpPost]
         public async Task<IActionResult>SubmitRegistration(SubmitRegistrationDto dto)

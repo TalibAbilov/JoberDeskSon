@@ -59,7 +59,7 @@ namespace JoberDesk.Business.Services.Implementations
 
                 Amount = (long)500,
                 Currency = "USD",
-                Description = "Product Selling amount",
+                Description = "Vakansiya paylaşılması",
                 Source = stripeToken,
                 ReceiptEmail = stripeEmail
             };
@@ -69,7 +69,10 @@ namespace JoberDesk.Business.Services.Implementations
             {
                 throw new Exception("Odenisde problem var");
             }
-
+            if (dto.EndTime >DateTime.Now.AddMonths(1))
+            {
+                throw new JobEndTimeExpireException();
+            }
             var job = _mapper.Map<Job>(dto);
 			await _rep.Create(job);
 			await _rep.SaveChangesAsync();
@@ -84,11 +87,66 @@ namespace JoberDesk.Business.Services.Implementations
 			var job = await _rep.GetById(id);
 			if (job == null)
 			{
-				    throw new JobNotFoundException();
+				throw new JobNotFoundException();
 			}
 			_rep.Delete(job);
 			await _rep.SaveChangesAsync();
 		}
+        public async Task SoftDelete(int id)
+        {
+            if (id <= 0)
+            {
+                throw new NegativeOrZeroIdException();
+            }
+            var job = await _rep.GetById(id);
+            if (job == null)
+            {
+                throw new JobNotFoundException();
+            }
+            _rep.SoftDelete(job);
+            await _rep.SaveChangesAsync();
+        }
+        public async Task ReActivate(int id, string stripeEmail, string stripeToken)
+        {
+            if (id <= 0)
+            {
+                throw new NegativeOrZeroIdException();
+            }
+            var job = await _rep.GetById(id,"Company");
+            if (job == null)
+            {
+                throw new JobNotFoundException();
+            }
+            var optionCust = new CustomerCreateOptions
+            {
+                Email = stripeEmail,
+                Name = job.Company.CompanyName,
+                Phone = "+994 50 66"
+            };
+            var serviceCust = new CustomerService();
+            Customer customer = serviceCust.Create(optionCust);
+
+            var optionsCharge = new ChargeCreateOptions
+            {
+
+                Amount = (long)400,
+                Currency = "USD",
+                Description = "Vakansiyanın aktivləşdirilməsi",
+                Source = stripeToken,
+                ReceiptEmail = stripeEmail
+            };
+            var serviceCharge = new ChargeService();
+            Charge charge = serviceCharge.Create(optionsCharge);
+            if (charge.Status != "succeeded")
+            {
+                throw new Exception("Odenisde problem var");
+            }
+            job.LastReActivateTime = DateTime.Now;
+            job.IsDeleted = false;
+            
+            _rep.Update(job);
+            await _rep.SaveChangesAsync();
+        }
 
         public async Task<List<GetJobDto>> FindAll(Expression<Func<Job,bool>> expression, params string[] includes)
         {
@@ -140,7 +198,21 @@ namespace JoberDesk.Business.Services.Implementations
             {
                 dto.Description = job.Description;
             }
-
+            if(job.LastReActivateTime == null)
+            {
+                if (dto.EndTime >job.CreatedAt.AddMonths(1))
+                {
+                    throw new JobEndTimeExpireException();
+                }
+            }
+            else
+            {
+                if (dto.EndTime > job.LastReActivateTime.Value.AddMonths(1))
+                {
+                    throw new JobEndTimeExpireException("Vakansiyanın bitmə tarixi son aktiv edildiyi tarixdən ən çox 1 ay artıq ola bilər.");
+                }
+            }
+           
             dto.CompanyId = job.CompanyId;
             _mapper.Map(dto,job);
 			_rep.Update(job);
@@ -191,15 +263,15 @@ namespace JoberDesk.Business.Services.Implementations
                 throw new Exception("Odenisde problem var");
             }
  
-            job.IsPremium = true;
-            var premiumEnd= DateTime.Now.AddDays(7);
-            if (premiumEnd >= job.EndTime)
+            job.IsPremium=true;
+            var premiumEnd=DateTime.Now.AddDays(7);
+            if (premiumEnd>=job.EndTime)
             {
                 throw new PremiumEndGreaterThanEndTime();
             }
             else
             {
-                job.PremiumEndTime = premiumEnd;
+                job.PremiumEndTime=premiumEnd;
             }
             _rep.Update(job);
             await _rep.SaveChangesAsync();
@@ -207,17 +279,35 @@ namespace JoberDesk.Business.Services.Implementations
 
         public async Task CheckAndUpdatePremiumJobs()
         {
-            var jobs =  _rep.FindAll(j => j.IsPremium && j.PremiumEndTime < DateTime.Now);
+            var jobs=_rep.FindAll(j=>j.IsPremium && j.PremiumEndTime<DateTime.Now);
 
             foreach (var job in jobs)
             {
-                job.IsPremium = false;
-                job.PremiumEndTime = DateTime.MinValue;
+                job.IsPremium=false;
+                job.PremiumEndTime=DateTime.MinValue;
 
                 _rep.Update(job);
             }
             await _rep.SaveChangesAsync(); 
         }
+        public async Task MarkOldJobsAsDeleted()
+        {
+            
+            var jobs=_rep.FindAll(x => x.CreatedAt <= DateTime.Now.AddMonths(-1) && !x.IsDeleted);
+            
+            if (jobs.Any())
+            {
+                foreach (var job in jobs)
+                {
+                    if (job.LastReActivateTime == null || job.LastReActivateTime <= DateTime.Now.AddMonths(-1))
+                    {
+                        job.IsDeleted=true;
+                    }
+                }
+                await _rep.SaveChangesAsync();
+            }
+        }
+
     }
 }
 

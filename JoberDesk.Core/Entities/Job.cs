@@ -17,12 +17,15 @@ namespace JoberDesk.Core.Entities
 		public ExperienceLevel ExperienceLevel { get; set; }
 		public EducationLevel EducationLevel { get; set; }
 		public int CategoryId { get; set; }
-		public Category Category { get; set; }
+		public Category Category { get; set; }	
 		public int CompanyId { get; set; }
 		public Company Company { get; set; }
 		public DateTime EndTime { get; set; }
-		public bool IsConfirmedByAdmin { get; set; }
 		public bool IsPremium { get; set; }
 		public DateTime PremiumEndTime { get; set; }
-	}
+		public string Location { get; set; }
+		public int Salary {  get; set; }
+		public int ViewCount { get; set; }
+		public DateTime? LastReActivateTime { get; set; }
+    }
 }

@@ -15,7 +15,6 @@ namespace JoberDesk.Business.Services.Implementations
         private readonly IServiceScopeFactory _serviceScopeFactory;
         private readonly ILogger<PremiumJobCheckerService> _logger;
        
-
         public PremiumJobCheckerService(IServiceScopeFactory serviceScopeFactory, ILogger<PremiumJobCheckerService> logger)
         {
             _serviceScopeFactory = serviceScopeFactory;
@@ -32,7 +31,6 @@ namespace JoberDesk.Business.Services.Implementations
                     var _jobService = scope.ServiceProvider.GetRequiredService<IJobService>();
                     await _jobService.CheckAndUpdatePremiumJobs();
                 }
-
                 await Task.Delay(TimeSpan.FromHours(4), stoppingToken);
             }
         }

@@ -16,13 +16,14 @@ namespace JoberDesk.Business.Services.Interfaces
 		Task<GetJobDto> GetById(int id, params string[] includes);
 		Task<List<GetJobDto>> GetAll(params string[] includes);
 		Task Create(CreateJobDto dto, string stripeEmail, string stripeToken);
-		Task Update(UpdateJobDto dto);
+		Task Update(UpdateJobDto dto);	
 		Task Delete(int id);
+		Task SoftDelete(int id);
+		Task ReActivate(int id, string stripeEmail, string stripeToken);
 		Task<List<GetJobDto>> FindAll(Expression<Func<Job, bool>> expression, params string[] includes);
         Task MakeJobPremium(int id, string stripeEmail, string stripeToken);
 		Task CheckAndUpdatePremiumJobs();
-		
-
+		Task MarkOldJobsAsDeleted();
 
     }
 }
