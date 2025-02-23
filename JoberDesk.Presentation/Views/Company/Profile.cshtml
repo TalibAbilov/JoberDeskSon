@@ -29,6 +29,19 @@
 							<a style="color:blue" class="btn btn-secondary" asp-action="Update" asp-route-id="@Model.Id">Düzəliş et</a>
 							<hr />
 							<ul class="information">
+
+								<li>
+									<span>Təsdiqlənib?:</span>
+									@if (Model.IsConfirmedByAdmin)
+									{
+										<span class="text-success">Bəli</span>
+									}
+									else
+									{
+										<span class="text-danger">Xeyr</span>
+									}
+								</li>
+
 								<li><span>E-poçt adresi:</span>@Model.AppUser?.Email</li>
 
 								<li><span>Şirkət adı:</span>@Model.CompanyName</li>

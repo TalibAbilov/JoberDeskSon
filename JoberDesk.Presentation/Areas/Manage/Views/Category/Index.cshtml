@@ -3,16 +3,16 @@
     int count = 0;
 }
 <div class="container">
-    <a class="btn btn-primary" asp-action="Create">Create</a>
+    <a class="btn btn-primary" asp-action="Create">Yarat</a>
    
     <table class="table">
         <thead>
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Id</th>
-                <th scope="col">Icon</th>
-                <th scope="col">Name</th>
-                <th scope="col">Job Count</th>
+                <th scope="col">Ikon</th>
+                <th scope="col">Ad</th>
+                <th scope="col">Vakansiya sayı</th>
             </tr>
         </thead>
         <tbody>
@@ -26,8 +26,8 @@
                     <td>@item.Name</td>
                     <td>@item.Jobs.Count</td>
                     <td>
-                        <a class="btn btn-secondary" asp-action="Update" asp-route-id="@item.Id">Update</a>
-                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        <a class="btn btn-secondary" asp-action="Update" asp-route-id="@item.Id">Redaktə</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
                     </td>
                 </tr>
             }

@@ -31552,6 +31552,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Company\c053404b-2a93-4c14-8006-bae9a349c684Screenshot (5).png))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Company\d78307b5-cb82-458c-9b79-c03c088a8d18CompanyLogo1.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>JoberDesk.Presentation</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/JoberDesk.Presentation</BasePath>
+      <RelativePath>Upload/Company/d78307b5-cb82-458c-9b79-c03c088a8d18CompanyLogo1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Company\d78307b5-cb82-458c-9b79-c03c088a8d18CompanyLogo1.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\Upload\Company\e0a9c70a-e589-464b-a27e-7f90aad06eebScreenshot 2024-10-24 012538.png))">
       <SourceType>Package</SourceType>
       <SourceId>JoberDesk.Presentation</SourceId>

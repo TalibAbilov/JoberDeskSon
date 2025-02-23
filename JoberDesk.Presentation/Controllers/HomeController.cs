@@ -109,6 +109,11 @@ namespace JoberDesk.Presentation.Controllers
             }
         }
 
+		public IActionResult Services()
+		{
+			return View();
+		}
+
 
 		public IActionResult Privacy()
 		{

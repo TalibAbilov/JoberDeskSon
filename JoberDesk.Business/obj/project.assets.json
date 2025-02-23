@@ -3323,11 +3323,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\JoberDesk.Business.csproj",
+      "projectUniqueName": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Business\\JoberDesk.Business.csproj",
       "projectName": "JoberDesk.Business",
-      "projectPath": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\JoberDesk.Business.csproj",
+      "projectPath": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Business\\JoberDesk.Business.csproj",
       "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\obj\\",
+      "outputPath": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3345,8 +3345,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\JoberDesk.DAL.csproj": {
-              "projectPath": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.DAL\\JoberDesk.DAL.csproj"
+            "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.DAL\\JoberDesk.DAL.csproj": {
+              "projectPath": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.DAL\\JoberDesk.DAL.csproj"
             }
           }
         }

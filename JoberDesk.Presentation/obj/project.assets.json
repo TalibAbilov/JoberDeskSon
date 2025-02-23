@@ -8185,11 +8185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\JoberDesk.Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Presentation\\JoberDesk.Presentation.csproj",
       "projectName": "JoberDesk.Presentation",
-      "projectPath": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\JoberDesk.Presentation.csproj",
+      "projectPath": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Presentation\\JoberDesk.Presentation.csproj",
       "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\obj\\",
+      "outputPath": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8207,8 +8207,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\JoberDesk.Business.csproj": {
-              "projectPath": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Business\\JoberDesk.Business.csproj"
+            "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Business\\JoberDesk.Business.csproj": {
+              "projectPath": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Business\\JoberDesk.Business.csproj"
             }
           }
         }

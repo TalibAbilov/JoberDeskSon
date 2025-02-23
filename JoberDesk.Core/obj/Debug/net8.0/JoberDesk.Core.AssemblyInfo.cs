@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JoberDesk.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58d6762111841b244096f0e7f6dba208c0012dbf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6d03a2f01c5361e370c9bf8b4a6b350c0d6606cb")]
 [assembly: System.Reflection.AssemblyProductAttribute("JoberDesk.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JoberDesk.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -820,11 +820,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\JoberDesk.Core.csproj",
+      "projectUniqueName": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Core\\JoberDesk.Core.csproj",
       "projectName": "JoberDesk.Core",
-      "projectPath": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\JoberDesk.Core.csproj",
+      "projectPath": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Core\\JoberDesk.Core.csproj",
       "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Core\\obj\\",
+      "outputPath": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",

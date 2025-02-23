@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tAE0A6KyjiI=",
+  "dgSpecHash": "rXNx2rjUPnk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\asus\\source\\repos\\JoberDesk\\JoberDesk.Presentation\\JoberDesk.Presentation.csproj",
+  "projectFilePath": "C:\\Users\\asus\\Desktop\\JobDesk\\JoberDesk.Presentation\\JoberDesk.Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asus\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

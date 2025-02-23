@@ -17,179 +17,183 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = JoberDesk.Presentation
 build_property.RootNamespace = JoberDesk.Presentation
-build_property.ProjectDir = C:\Users\asus\source\repos\JoberDesk\JoberDesk.Presentation\
+build_property.ProjectDir = C:\Users\asus\Desktop\JobDesk\JoberDesk.Presentation\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\asus\source\repos\JoberDesk\JoberDesk.Presentation
+build_property.MSBuildProjectDirectory = C:\Users\asus\Desktop\JobDesk\JoberDesk.Presentation
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/Category/Create.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/Category/Index.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/Category/Update.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/Category/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENhdGVnb3J5XFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/CompanyManagement/CompanyDetail.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/CompanyManagement/CompanyDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENvbXBhbnlNYW5hZ2VtZW50XENvbXBhbnlEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/CompanyManagement/Index.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/CompanyManagement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENvbXBhbnlNYW5hZ2VtZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/CompanyManagement/SendRejectionMessage.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/CompanyManagement/SendRejectionMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXENvbXBhbnlNYW5hZ2VtZW50XFNlbmRSZWplY3Rpb25NZXNzYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/Dashboard/Index.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/Dashboard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXERhc2hib2FyZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/Industry/Create.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/Industry/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEluZHVzdHJ5XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/Industry/Index.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/Industry/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEluZHVzdHJ5XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/Industry/Update.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/Industry/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXEluZHVzdHJ5XFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/Setting/Create.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/Setting/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNldHRpbmdcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/Setting/Index.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/Setting/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNldHRpbmdcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/Setting/Update.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/Setting/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNldHRpbmdcVXBkYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/Shared/_Layout.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXFNoYXJlZFxfTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/_ViewImports.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Areas/Manage/Views/_ViewStart.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Areas/Manage/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Auth/ForgetPassword.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Auth/ForgetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxGb3JnZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Auth/Login.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Auth/Register.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Auth/ResetPassword.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Auth/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Auth/SubmitRegistration.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Auth/SubmitRegistration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxTdWJtaXRSZWdpc3RyYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Category/Index.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Companies/CompanyDetail.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Companies/CompanyDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXENvbXBhbnlEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Companies/Index.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Companies/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFuaWVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Company/Create.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Company/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Company/Profile.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Company/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Company/Update.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Company/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxVcGRhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Home/Index.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Home/Privacy.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Industry/Index.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Home/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Industry/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kdXN0cnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Job/Activate.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Job/Activate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXEFjdGl2YXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Job/Create.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Job/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Job/Detail.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Job/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Job/MakePremium.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Job/MakePremium.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXE1ha2VQcmVtaXVtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Job/MyVacancies.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Job/MyVacancies.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXE15VmFjYW5jaWVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Job/Update.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Job/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSm9iXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Shared/Error.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Vacancies/VacancyDetail.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Vacancies/VacancyDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmFjYW5jaWVzXFZhY2FuY3lEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/_ViewImports.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/_ViewStart.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/asus/source/repos/JoberDesk/JoberDesk.Presentation/Views/Shared/_Layout.cshtml]
+[C:/Users/asus/Desktop/JobDesk/JoberDesk.Presentation/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-jgpiva2ef5

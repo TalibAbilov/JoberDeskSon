@@ -51,7 +51,7 @@ namespace JoberDesk.DAL.Configurations
                 .HasOne(x => x.Company)
                 .WithMany(x=>x.Jobs)
                 .HasForeignKey(x => x.CompanyId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
         }
 	}
